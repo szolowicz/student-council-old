@@ -166,7 +166,6 @@ export default {
       color: rgba(255, 255, 255, 1);
       font-size: 30px;
       font-weight: 700;
-      font-family: sans-serif;
       pointer-events: none;
       z-index: 1;
     }

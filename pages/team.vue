@@ -146,8 +146,6 @@ export default {
 <style lang="scss" scoped>
 @import './assets/scss/variables';
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 /* stylelint-disable */
 .container {
   width: 100%;
@@ -293,7 +291,6 @@ export default {
   box-sizing: border-box;
   &-bio {
     &-content {
-      font-family: 'Montserrat', sans-serif;
       margin-bottom: 15px;
       line-height: 25px;
       font-size: 1.05em;
