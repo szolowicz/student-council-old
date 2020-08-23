@@ -67,7 +67,7 @@ $radius: 30px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 1500px;
+  width: 100%;
   z-index: 9999;
   display: grid;
   grid-template-columns: 1fr 80px;

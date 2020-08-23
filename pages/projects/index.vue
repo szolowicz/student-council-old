@@ -17,7 +17,7 @@
             <div class="container">
               <nuxt-link :to="`/projects/${post.slug}`">
                 <div class="img_container">
-                  <img :src="post.previewPhoto.url" />
+                  <img :src="post.previewPhoto.url + '?w=450&h=250'" />
                 </div>
               </nuxt-link>
 

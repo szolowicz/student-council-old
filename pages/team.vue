@@ -19,7 +19,7 @@
             class="person"
             @click="selectPerson(index, $event)"
           >
-            <img class="person-img" :src="person.photo.url" />
+            <img class="person-img" :src="person.photo.url + '?w=400&h=300'" />
             <div class="person-details">
               <h2 class="person-title">{{ person.name }}</h2>
               <p class="person-desc">{{ person.title }}</p>
@@ -31,10 +31,13 @@
         <div v-if="isOk" class="team-detail-inner">
           <div
             class="team-detail-left"
-            :style="`background-image:url(${selectedPersonData.photo.url})`"
+            :style="`background-image:url(${selectedPersonData.photo.url}?w=400&h=300)`"
           >
             <div class="team-detail-photo">
-              <img :src="selectedPersonData.photo.url" alt="" />
+              <img
+                :src="selectedPersonData.photo.url + '?w=400&h=300'"
+                alt=""
+              />
             </div>
           </div>
           <div class="team-detail-right">
