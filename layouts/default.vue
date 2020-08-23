@@ -6,6 +6,14 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
 * {
   margin: 0;
   padding: 0;

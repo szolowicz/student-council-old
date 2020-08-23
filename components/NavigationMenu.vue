@@ -72,34 +72,6 @@ $radius: 30px;
   pointer-events: none;
 }
 
-.logo-wrap {
-  position: absolute;
-  display: block;
-  right: 0;
-  top: 40px;
-  cursor: pointer;
-}
-
-.logo-wrap a {
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-  transition: all 0.3s ease-out;
-}
-
-.logo-wrap a span {
-  color: #8167a9;
-}
-
-.logo-wrap a:hover {
-  opacity: 0.9;
-}
-
 .nav-but-wrap {
   grid-area: 1 / 2 / 2 / 3;
   position: relative;
@@ -258,7 +230,6 @@ body.nav-bg:not(.nologo) .nav-logo {
   text-align: left;
   color: #fff;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
   font-size: 22px;
   line-height: 1.2;
   letter-spacing: 2px;
@@ -276,13 +247,11 @@ body.nav-bg:not(.nologo) .nav-logo {
   color: black;
   overflow: hidden;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   z-index: 2;
   height: 28px;
   padding-left: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin: 5px;
   display: inline-block;
   transition: all 200ms linear;
 }
