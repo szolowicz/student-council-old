@@ -14,19 +14,25 @@
         <div class="nav__content">
           <ul class="nav__list">
             <li class="nav__list-item">
-              <a href="/" class="hover-target">Strona główna</a>
+              <nuxt-link :to="`/`" class="hover-target"
+                >Strona główna</nuxt-link
+              >
             </li>
+
             <li class="nav__list-item">
-              <a href="/team" class="hover-target">Zespół</a>
+              <nuxt-link :to="`/team`" class="hover-target">Zespół</nuxt-link>
             </li>
+
             <li class="nav__list-item">
-              <a href="/projects" class="hover-target">Projekty</a>
+              <nuxt-link :to="`/projects`" class="hover-target"
+                >Projekty</nuxt-link
+              >
             </li>
+
             <li class="nav__list-item">
-              <a href="/forstudent" class="hover-target">Dla ucznia</a>
-            </li>
-            <li class="nav__list-item">
-              <a href="/contact" class="hover-target">Kontakt</a>
+              <nuxt-link :to="`/contact`" class="hover-target"
+                >Kontakt</nuxt-link
+              >
             </li>
           </ul>
         </div>
