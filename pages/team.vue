@@ -144,6 +144,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './assets/scss/variables';
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* stylelint-disable */
@@ -235,7 +237,7 @@ export default {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #fbf9bd;
+    background: $mainColor;
     content: '';
     height: 0px;
     transition: 0.45s;

@@ -65,6 +65,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './assets/scss/variables';
+
 /* stylelint-disable */
 $radius: 30px;
 
@@ -277,7 +279,7 @@ body.nav-bg:not(.nologo) .nav-logo {
   width: 5px;
   height: 0;
   opacity: 0;
-  background: linear-gradient(288deg, #ff7f66, #de1444);
+  background: linear-gradient(288deg, $secondColor, $mainColor);
   z-index: 1;
   transition: all 200ms linear;
 }
@@ -289,13 +291,13 @@ body.nav-bg:not(.nologo) .nav-logo {
 }
 
 .nav__list-item:not(.active-nav) a:hover {
-  color: #770303;
+  color: $mainColor;
   font-size: 23px;
   transition: color 100ms ease-in-out, font-size 100ms ease-in-out;
 }
 
 .nav__list-item.active-nav a {
-  background: linear-gradient(288deg, #ff7f66, #de1444);
+  background: linear-gradient(288deg, $secondColor, $mainColor);
   background-clip: text;
   font-size: 25px;
   -webkit-background-clip: text;

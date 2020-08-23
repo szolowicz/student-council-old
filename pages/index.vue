@@ -21,6 +21,8 @@
 </template>
 
 <style lang="scss" scoped>
+@import './assets/scss/variables';
+
 .content {
   max-width: 725px;
   margin: 0 auto;
@@ -29,7 +31,7 @@
 
 .hero {
   position: relative;
-  background: #333;
+  background: $thirdColor;
   color: white;
   height: 100vh;
   display: flex;
@@ -62,7 +64,7 @@
   left: 0;
   right: 0;
   height: 200px;
-  background-color: #4973ff;
+  background-color: $mainColor;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
   transition: 500ms;
 }

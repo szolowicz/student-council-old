@@ -71,11 +71,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './assets/scss/variables';
+
 #timeline {
   &_line {
     position: fixed;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: $mainColor;
     width: 4px;
     height: 100%;
     margin-left: 60px;
@@ -107,7 +109,7 @@ export default {
     line-height: 80px;
     vertical-align: middle;
     font-weight: 700;
-    color: rgba(0, 0, 0, 0.3);
+    color: $secondColor;
   }
 
   div.container {
