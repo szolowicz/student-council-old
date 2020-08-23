@@ -1,9 +1,10 @@
 <template>
   <div>
     <b>No posty i chuj</b>
-    <div v-if="loading">Loading...</div>
-    <div v-else-if="error">{{ error }}</div>
-    <div v-else>
+
+    <div v-if="error">{{ error }}</div>
+    <div v-else-if="response.allPosts">
+      <!-- Thanks to Piotr Stadnicki <https://github.com/fastfend> -->
       <div class="pageblock_timeline">
         <div id="timeline_line"></div>
 
@@ -14,14 +15,14 @@
             class="timeline_card"
           >
             <div class="date">{{ post._createdAt | cutData(10) }}</div>
+
             <div class="container">
               <nuxt-link :to="`${post.slug}`">
                 <div class="img_container">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSwHeW1mTeJWfFY_1kx0N1dJ5vRju4u-GUb_w&usqp=CAU"
-                  />
+                  <img :src="post.previewPhoto.url" />
                 </div>
               </nuxt-link>
+
               <div class="title">{{ post.title }}</div>
             </div>
           </div>
@@ -39,6 +40,9 @@ const ALL_POSTS_QUERY = `
   allPosts {
     title
     content
+    previewPhoto {
+      url
+    }
     slug
     _createdAt
   }
@@ -53,9 +57,8 @@ export default {
     }
   },
   data: () => ({
-    response: null,
-    error: null,
-    loading: true
+    response: '',
+    error: null
   }),
   async mounted() {
     try {
@@ -65,7 +68,6 @@ export default {
     } catch (e) {
       this.error = e;
     }
-    this.loading = false;
   }
 };
 </script>
@@ -112,12 +114,6 @@ export default {
 
   div.container {
     position: relative;
-
-    // display: grid;
-    // grid-template-columns: 45% 1fr;
-    // grid-template-rows: 70px auto auto;
-    // grid-column-gap: 0px;
-    // grid-row-gap: 0px;
     div.img_container {
       position: relative;
       border-radius: 20px;
@@ -174,9 +170,30 @@ export default {
       pointer-events: none;
       z-index: 1;
     }
+
+    div.text {
+      overflow: hidden;
+      padding: 20px;
+      max-height: 1000px;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 14px;
+      transition: opacity 0.2s ease-in-out, max-height 0.2s ease-in-out,
+        padding 0.2s ease-in-out;
+      z-index: 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background: white;
+    }
   }
 
   div.container:not(.open) {
+    div.text {
+      opacity: 0;
+      max-height: 0;
+      padding: 0 20px;
+    }
+
     div.img_container {
       transform: scale(1) !important;
     }

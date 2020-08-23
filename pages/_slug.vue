@@ -5,6 +5,8 @@
     <div v-if="error">{{ error }}</div>
     <div v-else-if="response.post">
       <h1>{{ response.post.title }}</h1>
+      <p>{{ response.post._createdAt | formatData() }}</p>
+
       <div v-html="response.post.content"></div>
     </div>
   </div>
@@ -14,6 +16,11 @@
 import { request } from '../datocms';
 
 export default {
+  filters: {
+    formatData(text) {
+      return text.replace(/([A-Z])/g, ' ');
+    }
+  },
   data: () => ({
     response: '',
     error: null
@@ -26,6 +33,7 @@ export default {
             post(filter: { slug: { eq: "${this.$route.params.slug}" } }) {
               title
               content
+              _createdAt
             }
           }
         `
