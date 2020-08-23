@@ -9,9 +9,6 @@
       ]"
     >
       <div class="team-container">
-        <div class="header">
-          <h2 class="header-title">Our Team</h2>
-        </div>
         <div class="person-list">
           <div
             v-for="(person, index) in response.allTeamMembers"
@@ -157,25 +154,11 @@ export default {
   height: 100vh;
   flex-wrap: wrap;
 }
-.header {
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-  transition: 0.45s ease 0.05s;
-  max-height: 70px;
-  &-title {
-    width: 100%;
-    font-family: sans-serif;
-    font-size: 3.3em;
-    color: black;
-    margin-bottom: 15px;
-  }
-}
 
 .team-container {
   padding: 0 30px;
   box-sizing: border-box;
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   margin: auto;
   display: flex;
@@ -279,9 +262,6 @@ export default {
 }
 
 .container-selected {
-  .header {
-    max-height: 0px;
-  }
   .person {
     opacity: 0 !important;
     pointer-events: none;
@@ -487,9 +467,6 @@ export default {
   .person {
     width: 100%;
     margin-bottom: 50px;
-  }
-  .header {
-    margin-top: 50px;
   }
 }
 </style>

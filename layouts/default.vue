@@ -2,6 +2,7 @@
   <div>
     <NavigationMenu />
     <Nuxt />
+    <CopyrightFooter />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ html {
   font-family: Poppins, sans-serif;
   font-weight: 400;
   font-size: 14px;
+  background-color: #f5f5f5;
 }
 
 * {
