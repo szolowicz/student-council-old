@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="../" class="go_back">Powrót</a>
+    <nuxt-link :to="`./`" class="go_back">Powrót</nuxt-link>
 
     <div v-if="error">{{ error }}</div>
     <div v-else-if="response.post">
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { request } from '../datocms';
+import { request } from '../../datocms';
 
 export default {
   filters: {
