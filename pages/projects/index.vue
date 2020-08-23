@@ -1,5 +1,7 @@
 <template>
   <div>
+    <TitleBox>Projekty</TitleBox>
+
     <div v-if="error">{{ error }}</div>
     <div v-else-if="response.allPosts">
       <!-- Thanks to Piotr Stadnicki <https://github.com/fastfend> -->
@@ -108,8 +110,9 @@ export default {
     font-size: 26px;
     line-height: 80px;
     vertical-align: middle;
-    font-weight: 700;
+    font-weight: 600;
     color: $secondColor;
+    opacity: 0.7;
   }
 
   div.container {

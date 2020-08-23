@@ -1,5 +1,7 @@
 <template>
   <div>
+    <TitleBox v-if="!isSelected">Zespół</TitleBox>
+
     <div
       id="app"
       :class="[
@@ -151,7 +153,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
   flex-wrap: wrap;
 }
 
