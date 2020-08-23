@@ -8,7 +8,9 @@
           organizacji własnej pracy, poznawanie nowych rzeczy, nowe
           doświadczenia i wyzwania, możliwość poznania samego siebie od innej
           strony, poznanie innych kreatywnych ludzi.
-          <br />
+        </p>
+        <br />
+        <p>
           To jest właśnie samorząd uczniowski – to my zapewniamy pomysły na
           działania, które polepszają nasze życie w szkole.
         </p>
@@ -46,6 +48,7 @@
   margin: 0 0 10px;
   line-height: 1;
   color: rgba(255, 255, 255, 0.9);
+  text-align: center;
 }
 
 .hero p {
@@ -54,6 +57,7 @@
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.4;
+  text-align: justify;
 }
 
 /* ========================= */
