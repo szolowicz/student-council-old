@@ -48,6 +48,14 @@ export default {
       isActive: false
     };
   },
+  mounted() {
+    const mobileAndTabletCheck = () =>
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    if (!mobileAndTabletCheck()) this.isActive = true;
+  },
   methods: {
     openMenu() {
       this.isActive = !this.isActive;
@@ -140,7 +148,7 @@ body.nav-bg:not(.nologo) .nav-logo {
   height: 2px;
   width: 30px;
   display: block;
-  background-color: black;
+  background-color: white;
   margin-bottom: 7px;
   cursor: pointer;
   -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
