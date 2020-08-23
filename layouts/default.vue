@@ -2,7 +2,6 @@
   <div>
     <NavigationMenu />
     <Nuxt />
-    <CopyrightFooter />
   </div>
 </template>
 
