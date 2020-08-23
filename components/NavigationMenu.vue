@@ -58,7 +58,6 @@ export default {
 
 <style lang="scss" scoped>
 /* stylelint-disable */
-
 $radius: 30px;
 
 .cd-header {
