@@ -63,7 +63,7 @@
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 28px;
     font-family: 'Raleway', sans-serif;
     color: rgba(0, 0, 0, 0.7);
   }
@@ -72,7 +72,7 @@
     margin: 5px 0 5px 0;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     color: rgba(0, 0, 0, 0.8);
   }
 

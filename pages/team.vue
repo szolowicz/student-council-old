@@ -295,7 +295,7 @@ export default {
     &-content {
       margin-bottom: 15px;
       line-height: 25px;
-      font-size: 1.05em;
+      font-size: 1.5em;
     }
   }
   &-header {
