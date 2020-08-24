@@ -33,7 +33,30 @@ export default {
       },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo.png' }]
+  },
+  /*
+   ** Progressive Web App manifest
+   ** See https://pwa.nuxtjs.org/
+   */
+  pwa: {
+    icon: {
+      source: '/icon.png'
+    },
+    meta: {
+      title: 'Samorząd uczniowski ZSM1',
+      author: 'Aleksander Szołowicz, Stanisław Fijołek',
+      description:
+        'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy',
+      lang: 'pl'
+    },
+    manifest: {
+      name: 'Samorząd uczniowski ZSM1',
+      short_name: 'ZSM1 SU',
+      description:
+        'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy',
+      lang: 'pl'
+    }
   },
   /*
    ** Global CSS
@@ -63,7 +86,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxtjs/pwa'],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
