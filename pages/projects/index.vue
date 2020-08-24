@@ -68,6 +68,9 @@ export default {
     } catch (e) {
       this.error = e;
     }
+  },
+  head: {
+    titleTemplate: 'Projekty - %s'
   }
 };
 </script>

@@ -22,6 +22,7 @@ export default {
     }
   },
   data: () => ({
+    title: 'Projekty - %s',
     response: '',
     error: null
   }),
@@ -38,9 +39,15 @@ export default {
           }
         `
       });
+      this.title = `${this.response.post.title} - Projekty - %s`;
     } catch (e) {
       this.error = e;
     }
+  },
+  head() {
+    return {
+      titleTemplate: this.title
+    };
   }
 };
 </script>

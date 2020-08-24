@@ -2,7 +2,9 @@
   <div>
     <TitleBox v-if="!isSelected">Zespół</TitleBox>
 
+    <div v-if="error">{{ error }}</div>
     <div
+      v-else-if="response.allTeamMembers"
       id="app"
       :class="[
         'container',
@@ -76,6 +78,7 @@ const ALL_MEMBERS_QUERY = `
 export default {
   data() {
     return {
+      title: 'Zespół - %s',
       response: '',
       error: null,
       selectedPersonIndex: null,
@@ -85,7 +88,7 @@ export default {
       isReady: false,
       isOk: false,
       selectedPersonData: {
-        name: null,
+        name: '',
         title: null,
         photo: null
       }
@@ -115,6 +118,7 @@ export default {
           `width:${this.selectedPerson.offsetWidth}px;`
         );
         this.selectedPersonData = this.response.allTeamMembers[index];
+        this.title = `${this.selectedPersonData.name} - Zespół - %s`;
         window.setTimeout(() => {
           this.inlineStyles = `width:${this.selectedPerson.offsetWidth}px;height:${this.selectedPerson.offsetHeight}px;left:${this.selectedPerson.offsetLeft}px;top:${this.selectedPerson.offsetTop}px;position:fixed`;
           this.selectedPerson.setAttribute('style', this.inlineStyles);
@@ -125,6 +129,7 @@ export default {
         }, 420);
       } else {
         this.reset();
+        this.title = 'Zespół - %s';
       }
     },
     reset() {
@@ -141,6 +146,11 @@ export default {
         this.isOk = false;
       }, 400);
     }
+  },
+  head() {
+    return {
+      titleTemplate: this.title
+    };
   }
 };
 </script>

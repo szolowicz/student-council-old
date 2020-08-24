@@ -2,7 +2,7 @@
   <div>
     <section class="hero">
       <div class="content">
-        <h2>Samorząd Uczniowski</h2>
+        <h2>Samorząd uczniowski</h2>
         <p>
           Polepszanie umiejętności współpracy, sprawnej komunikacji i
           organizacji własnej pracy, poznawanie nowych rzeczy, nowe

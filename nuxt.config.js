@@ -14,15 +14,24 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Samorząd uczniowski ZSM1',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content:
+          'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy'
+      },
+      {
+        name: 'keywords',
+        content: 'ZSM1, Zespół, Szkół, Mechanicznych, nr 1, Samorząd, SU'
+      },
+      {
+        name: 'author',
+        content: 'Aleksander Szołowicz, Stanisław Fijołek'
+      },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },

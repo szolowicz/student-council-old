@@ -36,6 +36,14 @@
   </div>
 </template>
 
+<script>
+export default {
+  head: {
+    titleTemplate: 'Kontakt - %s'
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 /* stylelint-disable */
 

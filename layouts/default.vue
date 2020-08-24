@@ -8,6 +8,8 @@
 <style lang="scss">
 @import './assets/scss/variables';
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 html {
   font-family: $mainFont;
   font-weight: 400;
