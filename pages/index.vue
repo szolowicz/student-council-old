@@ -19,7 +19,6 @@
 
       <div class="scroll-down"></div>
     </section>
-    >
 
     <h1 class="section_topic">
       O nas
@@ -77,6 +76,12 @@
   padding: 0 20px;
 }
 
+@media (max-width: 300px) {
+  .content {
+    padding: 0 5px;
+  }
+}
+
 .hero {
   position: relative;
   color: white;
@@ -88,7 +93,7 @@
   h2 {
     position: relative;
     z-index: 1;
-    font-size: 4.5rem;
+    font-size: 4.2rem;
     margin: 0 0 10px;
     line-height: 1;
     color: rgba(255, 255, 255, 0.9);
@@ -102,6 +107,12 @@
     color: rgba(255, 255, 255, 0.5);
     line-height: 1.4;
     text-align: justify;
+  }
+
+  @media (max-width: 320px) {
+    h2 {
+      font-size: 3.5rem;
+    }
   }
 }
 
@@ -179,6 +190,7 @@
 }
 
 .section_topic {
+  margin-top: 15px;
   font-weight: 700;
   font-size: 45px;
   color: $mainColor;

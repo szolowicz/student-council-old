@@ -87,5 +87,15 @@ export default {
   & > div {
     margin: 20px;
   }
+
+  @media (max-width: 300px) {
+    .title {
+      font-size: 28px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+    }
+  }
 }
 </style>

@@ -385,6 +385,12 @@ export default {
       font-size: 1em;
     }
   }
+
+  @media (max-width: 360px) {
+    &-right {
+      margin-left: 5px;
+    }
+  }
 }
 
 .container-ready {
@@ -461,6 +467,12 @@ export default {
     padding: 0 50px;
     width: 100%;
   }
+  @media (max-width: 360px) {
+    .team-detail-right {
+      padding: 0;
+    }
+  }
+
   .team-detail-header {
     text-align: center;
   }
