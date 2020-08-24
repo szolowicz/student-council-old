@@ -345,7 +345,7 @@ body.nav-bg:not(.nologo) .nav-logo {
 .nav-active .nav::before,
 .nav-active .nav::after {
   width: 300px;
-  height: 350px;
+  height: 300px;
   border-radius: 15px;
 }
 

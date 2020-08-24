@@ -158,7 +158,7 @@ export default {
 }
 
 .team-container {
-  padding: 0 30px;
+  padding: 10px 30px;
   box-sizing: border-box;
   max-width: 1200px;
   width: 100%;

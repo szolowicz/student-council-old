@@ -50,7 +50,7 @@
   width: 100%;
   min-width: 220px;
   max-width: 350px;
-  min-height: 460px;
+  min-height: 350px;
   background-color: white;
   border-radius: 5px;
   overflow: hidden;
@@ -63,7 +63,7 @@
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 26px;
     font-family: 'Raleway', sans-serif;
     color: rgba(0, 0, 0, 0.7);
   }
@@ -72,7 +72,7 @@
     margin: 5px 0 5px 0;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 16px;
     color: rgba(0, 0, 0, 0.8);
   }
 
