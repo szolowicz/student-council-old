@@ -74,6 +74,7 @@ $radius: 30px;
   position: fixed;
   height: 100%;
   width: 100%;
+  max-width: 1500px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -120,21 +121,16 @@ $radius: 30px;
   }
 }
 
-body.nav-bg .nav-but-wrap {
+.nav-but-wrap {
   background-color: white;
 }
 
-body.nav-bg .nav-but-wrap::before {
+.nav-but-wrap::before {
   opacity: 1;
 }
 
-body.nav-bg .menu-icon__line {
+.menu-icon__line {
   background-color: black;
-}
-
-body.nav-bg:not(.nologo) .nav-logo {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .menu-icon {
@@ -150,7 +146,7 @@ body.nav-bg:not(.nologo) .nav-logo {
   height: 2px;
   width: 30px;
   display: block;
-  background-color: white;
+  background-color: black;
   margin-bottom: 7px;
   cursor: pointer;
   -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;

@@ -19,6 +19,52 @@
 
       <div class="scroll-down"></div>
     </section>
+    >
+
+    <h1 class="section_topic">
+      O nas
+    </h1>
+
+    <div id="services_container">
+      <div class="service-card">
+        <img
+          src="https://img.icons8.com/dusk/64/000000/party-baloons.png"
+          class="logo"
+        />
+        <div class="name">Imprezy szkolne</div>
+        <div class="desc">
+          Samorząd zajmuje się organizacją imprez szkolnych takich jak dzień
+          nauczyciela, dzień chłopaka lub walentynki.
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img
+          src="https://img.icons8.com/dusk/64/000000/heart-health.png"
+          class="logo"
+        />
+        <div class="name">Życie szkoły</div>
+        <div class="desc">
+          Zajmujemy się poprawianiem samopoczucia ucznia w szkole i dodawaniem
+          udogodnień.
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img
+          src="https://img.icons8.com/plasticine/100/000000/idea.png"
+          class="logo"
+        />
+        <div class="name">Innowacyjność</div>
+        <div class="desc">
+          Planujemy w tym roku wprowadzić wypożyczanie ładowarek do telefonu w
+          sekretariacie, ułatwić przekazywanie informacji o konkursach i ważnych
+          wydarzeniach szkolnych.
+        </div>
+      </div>
+    </div>
+
+    <FooterInfo />
   </div>
 </template>
 
@@ -38,25 +84,25 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-}
 
-.hero h2 {
-  position: relative;
-  z-index: 1;
-  font-size: 4.5rem;
-  margin: 0 0 10px;
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.9);
-  text-align: center;
-}
+  h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 4.5rem;
+    margin: 0 0 10px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+  }
 
-.hero p {
-  position: relative;
-  z-index: 1;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.4;
-  text-align: justify;
+  p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+    text-align: justify;
+  }
 }
 
 .waves {
@@ -129,6 +175,93 @@
 @keyframes bounce {
   50% {
     transform: translateY(-50%);
+  }
+}
+
+.section_topic {
+  font-weight: 700;
+  font-size: 45px;
+  color: $mainColor;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(288deg, $mainColor, $secondColor);
+  background-clip: text;
+  background-size: 100%;
+  background-position: 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: tracking-in-contract 0.6s ease-in-out;
+  animation: tracking-in-contract 0.6s ease-in-out;
+}
+
+#services_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.service-card.new::before {
+  content: 'Nowe';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  background-color: red;
+  display: inline-block;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 50px;
+  transform: rotate(-45deg) translate(0, -20px);
+  background-image: linear-gradient(90deg, #ff512f, #dd2476);
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+
+  > .logo {
+    margin-top: 40px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    align-self: center;
+  }
+
+  > .name {
+    margin-top: 20px;
+    font-size: 20px;
+    align-self: center;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  > .desc {
+    margin: 20px;
+    text-align: center;
   }
 }
 </style>
