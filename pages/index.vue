@@ -33,7 +33,6 @@
 
 .hero {
   position: relative;
-  background: $thirdColor;
   color: white;
   height: 100vh;
   display: flex;
@@ -59,8 +58,6 @@
   line-height: 1.4;
   text-align: justify;
 }
-
-/* ========================= */
 
 .waves {
   position: absolute;

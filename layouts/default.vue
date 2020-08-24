@@ -14,7 +14,6 @@ html {
   font-family: $mainFont;
   font-weight: 400;
   font-size: 15px;
-  background-color: #f5f5f5;
 }
 
 * {
