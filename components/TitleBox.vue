@@ -31,18 +31,18 @@
   @media (max-width: 600px) {
     height: 150px;
   }
-}
 
-.title_box_text {
-  width: 100%;
-  max-width: 1400px;
-  font-size: calc(38px + 2vw);
-  text-transform: uppercase;
-  vertical-align: text-bottom;
-  margin: 0 50px 10px;
-  font-weight: 600;
-  color: #f5f5f5;
-  -webkit-animation: show-fromleft 0.6s ease-in-out;
-  animation: show-fromleft 0.6s ease-in-out;
+  &_text {
+    width: 100%;
+    max-width: 1400px;
+    font-size: calc(38px + 2vw);
+    text-transform: uppercase;
+    vertical-align: text-bottom;
+    margin: 0 50px 10px;
+    font-weight: 600;
+    color: #f5f5f5;
+    -webkit-animation: show-fromleft 0.6s ease-in-out;
+    animation: show-fromleft 0.6s ease-in-out;
+  }
 }
 </style>

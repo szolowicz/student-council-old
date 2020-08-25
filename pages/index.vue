@@ -81,10 +81,8 @@
   margin: 0 auto;
   padding: 0 20px;
   margin-bottom: 10%;
-}
 
-@media (max-width: 300px) {
-  .content {
+  @media (max-width: 300px) {
     padding: 0 5px;
   }
 }
@@ -158,38 +156,28 @@
   background-color: $mainColor;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
   transition: 500ms;
-}
 
-.waves::before,
-.waves::after {
-  content: '';
-  position: absolute;
-  width: 300vw;
-  height: 300vw;
-  top: -65vw;
-  left: 50%;
-  transform: translate(-50%, -75%);
-}
-
-.waves::before {
-  border-radius: 44%;
-  background: rgba(245, 245, 245, 1);
-  animation: waves 8s linear infinite;
-}
-
-.waves::after {
-  border-radius: 44%;
-  background: rgba(245, 245, 245, 0.5);
-  animation: waves 15s linear infinite;
-}
-
-@keyframes waves {
-  0% {
-    transform: translate(-50%, -75%) rotate(0deg);
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -65vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
   }
 
-  100% {
-    transform: translate(-50%, -75%) rotate(360deg);
+  &::before {
+    border-radius: 44%;
+    background: rgba(245, 245, 245, 1);
+    animation: waves 8s linear infinite;
+  }
+
+  &::after {
+    border-radius: 44%;
+    background: rgba(245, 245, 245, 0.5);
+    animation: waves 15s linear infinite;
   }
 }
 
@@ -197,27 +185,21 @@
   height: 100vh;
   position: absolute;
   width: 100%;
-}
 
-.scroll-down::before {
-  animation: bounce 1s ease infinite;
-  bottom: 2rem;
-  content: '⬇';
-  font-size: 2rem;
-  height: 4rem;
-  left: 50%;
-  letter-spacing: -1px;
-  line-height: 4rem;
-  margin-left: -3rem;
-  opacity: 0.8;
-  position: absolute;
-  text-align: center;
-  width: 6rem;
-}
-
-@keyframes bounce {
-  50% {
-    transform: translateY(-50%);
+  &::before {
+    animation: bounce 1s ease infinite;
+    bottom: 2rem;
+    content: '⬇';
+    font-size: 2rem;
+    height: 4rem;
+    left: 50%;
+    letter-spacing: -1px;
+    line-height: 4rem;
+    margin-left: -3rem;
+    opacity: 0.8;
+    position: absolute;
+    text-align: center;
+    width: 6rem;
   }
 }
 
@@ -248,27 +230,6 @@
   align-items: flex-start;
   max-width: 1500px;
   margin: auto;
-}
-
-.service-card.new::before {
-  content: 'Nowe';
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 70px;
-  background-color: red;
-  display: inline-block;
-  z-index: 2;
-  color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 50px;
-  transform: rotate(-45deg) translate(0, -20px);
-  background-image: linear-gradient(90deg, #ff512f, #dd2476);
 }
 
 .service-card {
@@ -313,6 +274,16 @@
   }
 }
 
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(0.7);
@@ -320,6 +291,12 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-50%);
   }
 }
 </style>

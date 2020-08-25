@@ -18,32 +18,34 @@ body {
 
 ::-webkit-scrollbar {
   width: 12px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: darken($color: $mainColor, $amount: 10);
-  border-radius: 15px;
-}
-::-webkit-scrollbar-track {
-  background: darken($color: $secondColor, $amount: 20);
+
+  &-thumb {
+    background-color: darken($color: $mainColor, $amount: 10);
+    border-radius: 15px;
+  }
+
+  &-track {
+    background: darken($color: $secondColor, $amount: 20);
+  }
 }
 
 * {
   box-sizing: border-box;
-}
 
-*:not(ul, li, p) {
-  margin: 0;
-  padding: 0;
+  &:not(ul, li, p) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 a {
   text-decoration: none;
   font-weight: bold;
   color: black;
-}
-
-a:hover {
-  color: $secondColor;
   transition-duration: 0.5s;
+
+  &:hover {
+    color: $secondColor;
+  }
 }
 </style>

@@ -185,6 +185,7 @@ export default {
     line-height: 1.15;
   }
 }
+
 .person {
   width: calc(34% - 30px);
   cursor: pointer;
@@ -210,13 +211,16 @@ export default {
       top: 40%;
     }
   }
+
   &-img {
     width: 100%;
   }
+
   &-title {
     color: white;
     font-size: 2em;
   }
+
   &-desc {
     color: white;
     margin-top: 10px;
@@ -224,6 +228,7 @@ export default {
     font-size: 0.8em;
     letter-spacing: 2px;
   }
+
   &-list {
     display: flex;
     flex-wrap: wrap;
@@ -234,6 +239,7 @@ export default {
       }
     }
   }
+
   &:hover {
     opacity: 1 !important;
 
@@ -241,6 +247,7 @@ export default {
       display: block;
     }
   }
+
   &:before {
     position: absolute;
     left: 0;
@@ -251,6 +258,7 @@ export default {
     height: 0px;
     transition: 0.45s;
   }
+
   &:after {
     content: '<';
     font-size: 36px;
@@ -277,18 +285,21 @@ export default {
     opacity: 0 !important;
     pointer-events: none;
   }
+
   .person-list .person-selected {
     opacity: 1 !important;
 
     &:before {
       height: 100%;
     }
+
     .person-details {
       margin-top: -40px;
       opacity: 0;
     }
   }
 }
+
 .team-detail {
   position: absolute;
   width: calc(100% - 100px);
@@ -300,6 +311,7 @@ export default {
   opacity: 0;
   visibility: hidden;
   box-sizing: border-box;
+
   &-bio {
     &-content {
       margin-bottom: 15px;
@@ -313,14 +325,17 @@ export default {
       }
     }
   }
+
   &-header {
     margin-bottom: 30px;
   }
+
   &-inner {
     min-height: 100%;
     display: flex;
     flex-wrap: wrap;
   }
+
   &-left {
     position: relative;
     width: 650px;
@@ -342,6 +357,7 @@ export default {
       right: 0;
       top: 0;
     }
+
     &:after {
       width: 100%;
       height: 100%;
@@ -359,17 +375,20 @@ export default {
       top: 0;
     }
   }
+
   &-photo {
     position: relative;
     text-align: center;
     z-index: 999;
     width: 100%;
     font-size: 0px;
+
     img {
       max-width: 100%;
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
     }
   }
+
   &-right {
     box-sizing: border-box;
     width: calc(98% - 650px);
@@ -381,10 +400,12 @@ export default {
     position: relative;
     right: 0;
     flex-wrap: wrap;
+
     .person-title {
       font-size: 3em;
       color: black;
     }
+
     .person-desc {
       color: black;
       font-size: 1em;
@@ -404,14 +425,17 @@ export default {
     opacity: 1;
     right: 0;
     visibility: visible;
+
     img {
       width: 75%;
     }
   }
+
   .team-container {
     height: 0px;
     overflow: hidden;
   }
+
   .person-selected {
     left: 0px !important;
     top: 0px !important;
@@ -419,6 +443,7 @@ export default {
     height: 100% !important;
     width: 100px !important;
     pointer-events: auto;
+
     &:after {
       opacity: 1;
       visibility: visible;
@@ -430,6 +455,7 @@ export default {
   &:before {
     height: 0px !important;
   }
+
   .person-details {
     margin-top: -15px !important;
     transition-delay: 0.35s;
@@ -443,13 +469,16 @@ export default {
     padding: 0 40px;
     box-sizing: border-box;
   }
+
   .team-detail-right {
     padding-right: 0;
     width: calc(100% - 440px);
   }
+
   .person .person-title {
     font-size: 1.7em;
   }
+
   .person-details {
     padding: 0 10px;
   }
@@ -459,6 +488,7 @@ export default {
   .team-detail-left {
     width: 100%;
     padding: 50px 50px 30px 50px;
+
     &:after {
       background: linear-gradient(
         to bottom,
@@ -472,6 +502,7 @@ export default {
     padding: 0 50px;
     width: 100%;
   }
+
   @media (max-width: 360px) {
     .team-detail-right {
       padding: 0;
@@ -481,16 +512,20 @@ export default {
   .team-detail-header {
     text-align: center;
   }
+
   .container-ready .person-selected {
     width: 50px !important;
   }
+
   .team-detail {
     width: calc(100% - 50px);
   }
+
   .person {
     width: calc(50% - 20px);
   }
 }
+
 @media (max-width: 480px) {
   .person {
     width: 100%;
