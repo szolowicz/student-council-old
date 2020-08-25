@@ -31,16 +31,6 @@ footer {
     margin: 3px;
     color: rgba(0, 0, 0, 0.4);
     text-align: center;
-
-    a {
-      color: rgba(0, 0, 0, 0.4);
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: rgba(0, 0, 0, 0.8);
-    }
   }
 }
 </style>

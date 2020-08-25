@@ -2,7 +2,7 @@
   <div>
     <section class="hero">
       <div class="content">
-        <img src="https://img.icons8.com/dusk/100/000000/idea.png" />
+        <img src="idea.png" />
 
         <h1>Samorząd uczniowski</h1>
 
@@ -33,10 +33,7 @@
 
     <div id="services_container">
       <div class="service-card">
-        <img
-          src="https://img.icons8.com/dusk/64/000000/party-baloons.png"
-          class="logo"
-        />
+        <img src="/party-baloons.png" class="logo" />
         <div class="name">Imprezy szkolne</div>
         <div class="desc">
           Samorząd zajmuje się organizacją imprez szkolnych takich jak dzień
@@ -45,10 +42,7 @@
       </div>
 
       <div class="service-card">
-        <img
-          src="https://img.icons8.com/dusk/64/000000/heart-health.png"
-          class="logo"
-        />
+        <img src="/heart-health.png" class="logo" />
         <div class="name">Życie szkoły</div>
         <div class="desc">
           Zajmujemy się poprawianiem samopoczucia ucznia w szkole i dodawaniem
@@ -57,10 +51,7 @@
       </div>
 
       <div class="service-card">
-        <img
-          src="https://img.icons8.com/plasticine/100/000000/idea.png"
-          class="logo"
-        />
+        <img src="/innovation.png" class="logo" />
         <div class="name">Innowacyjność</div>
         <div class="desc">
           Planujemy w tym roku wprowadzić wypożyczanie ładowarek do telefonu w
@@ -120,6 +111,7 @@
     margin: 0 0 10px;
     line-height: 1;
     text-align: center;
+    animation: pulse 2s;
   }
 
   p {
@@ -306,6 +298,16 @@
   .waves,
   .scroll-down {
     display: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 </style>

@@ -37,6 +37,12 @@ body {
 
 a {
   text-decoration: none;
+  font-weight: bold;
   color: black;
+}
+
+a:hover {
+  color: $secondColor;
+  transition-duration: 0.5s;
 }
 </style>

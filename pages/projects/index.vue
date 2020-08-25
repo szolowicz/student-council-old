@@ -4,7 +4,6 @@
 
     <div v-if="error">{{ error }}</div>
     <div v-else-if="response.allPosts">
-      <!-- Thanks to Piotr Stadnicki <https://github.com/fastfend> -->
       <div class="pageblock_timeline">
         <div id="timeline_line"></div>
 
