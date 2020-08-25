@@ -12,7 +12,7 @@
       </div>
       <div class="nav">
         <div class="nav__content">
-          <ul class="nav__list">
+          <ul class="nav__list" @click="isActive = false">
             <li class="nav__list-item">
               <nuxt-link :to="`/`" class="hover-target"
                 >Strona główna</nuxt-link

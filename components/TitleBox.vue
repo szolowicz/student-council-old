@@ -27,6 +27,10 @@
   justify-content: center;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
   margin-bottom: 10px;
+
+  @media (max-width: 600px) {
+    height: 150px;
+  }
 }
 
 .title_box_text {

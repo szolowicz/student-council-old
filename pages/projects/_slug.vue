@@ -3,14 +3,16 @@
     <nuxt-link :to="`./`" class="go-back">Powrót</nuxt-link>
 
     <div v-if="error">{{ error }}</div>
-    <div v-else-if="response.post" class="post-container">
-      <h1>{{ response.post.title }}</h1>
-      <span>Dodano {{ response.post._createdAt | formatData() }}</span>
-      <span v-if="response.post._createdAt != response.post._updatedAt">
-        Zaktualizowano {{ response.post._updatedAt | formatData() }}
-      </span>
+    <div v-else-if="response.post" class="post">
+      <div class="post-header">
+        <h1>{{ response.post.title }}</h1>
+        <p>Dodano {{ response.post._createdAt | formatData() }}</p>
+        <p v-if="response.post._createdAt != response.post._updatedAt">
+          Zaktualizowano {{ response.post._updatedAt | formatData() }}
+        </p>
+      </div>
 
-      <div v-html="response.post.content"></div>
+      <div class="post-content" v-html="response.post.content"></div>
     </div>
   </div>
 </template>
@@ -57,10 +59,11 @@ export default {
 </script>
 
 <style lang="scss">
-.post-container {
+@import './assets/scss/variables';
+
+.post {
   margin: 40px auto;
-  padding: 20px;
-  width: 80vw;
+  width: 55vw;
   background-color: white;
   border-radius: 5px;
   overflow: hidden;
@@ -68,7 +71,34 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  text-align: justify;
+
+  @media (max-width: 600px) {
+    width: 95vw;
+  }
+
+  &-header {
+    background: -webkit-gradient(
+      linear,
+      right top,
+      left top,
+      from($mainColor),
+      to($secondColor)
+    );
+    background: linear-gradient(270deg, $mainColor, $secondColor);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &-content {
+    padding: 20px;
+  }
 
   img {
     width: 100%;
