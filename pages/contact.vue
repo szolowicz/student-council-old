@@ -72,7 +72,6 @@ export default {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 28px;
-    font-family: 'Raleway', sans-serif;
     color: rgba(0, 0, 0, 0.7);
   }
 

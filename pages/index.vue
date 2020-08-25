@@ -110,7 +110,7 @@
     z-index: 1;
     display: block;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   h1 {
@@ -137,6 +137,10 @@
 
     p {
       text-align: center;
+    }
+
+    img {
+      margin-bottom: 5px;
     }
   }
 }
@@ -255,7 +259,6 @@
   z-index: 2;
   color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
@@ -289,7 +292,6 @@
     margin-top: 20px;
     font-size: 20px;
     align-self: center;
-    font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
   }
