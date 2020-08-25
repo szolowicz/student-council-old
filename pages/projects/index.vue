@@ -85,12 +85,7 @@ export default {
     width: 4px;
     height: 100%;
     margin-left: 60px;
-    margin-top: -260px;
-    padding-bottom: 260px;
-
-    @media (max-width: 435px) {
-      margin-left: 40px;
-    }
+    margin-top: -160px;
   }
 }
 
