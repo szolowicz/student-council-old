@@ -65,9 +65,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* stylelint-disable */
 @import './assets/scss/variables';
 
-/* stylelint-disable */
 $radius: 30px;
 
 .cd-header {
@@ -229,8 +229,6 @@ $radius: 30px;
 
 .nav__list {
   position: relative;
-  padding: 0;
-  margin: 0;
   z-index: 2;
 }
 

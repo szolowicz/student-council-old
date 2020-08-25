@@ -68,7 +68,6 @@ export default {
   flex-wrap: wrap;
 
   .title {
-    margin: 0;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 28px;

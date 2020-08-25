@@ -31,11 +31,8 @@ body {
 
 * {
   box-sizing: border-box;
-
-  &:not(ul, li, p) {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
 }
 
 a {

@@ -90,10 +90,6 @@ export default {
     width: 100%;
     text-align: center;
     padding: 10px;
-
-    p {
-      margin: 0;
-    }
   }
 
   &-content {
@@ -108,6 +104,13 @@ export default {
 
   p {
     font-size: 18px;
+    margin: 1em 0;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin: 1em 0;
+    padding-left: 40px;
   }
 }
 

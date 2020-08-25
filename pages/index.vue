@@ -118,8 +118,6 @@
     font-size: 1.1rem;
     line-height: 1.4;
     text-align: justify;
-    margin: 0;
-    padding: 0;
   }
 
   @media (max-width: 600px) {

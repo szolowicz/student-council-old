@@ -155,9 +155,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* stylelint-disable */
+
 @import './assets/scss/variables';
 
-/* stylelint-disable */
 .container {
   width: 100%;
   display: flex;
