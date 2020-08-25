@@ -20,7 +20,11 @@
             class="person"
             @click="selectPerson(index, $event)"
           >
-            <img class="person-img" :src="person.photo.url + '?w=400&h=300'" />
+            <img
+              class="person-img"
+              :src="person.photo.url + '?w=400&h=300'"
+              alt="Członek samorządu"
+            />
             <div class="person-details">
               <h2 class="person-title">{{ person.name }}</h2>
               <p class="person-desc">{{ person.title }}</p>

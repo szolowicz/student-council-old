@@ -2,7 +2,7 @@
   <div>
     <section class="hero">
       <div class="content">
-        <img src="logo.png" height="128px" />
+        <img src="logo.png" class="logo" alt="Logo samorządu szkolnego" />
 
         <h1>Samorząd uczniowski</h1>
 
@@ -33,7 +33,7 @@
 
     <div id="services_container">
       <div class="service-card">
-        <img src="/party-baloons.png" class="logo" />
+        <img src="/party-baloons.png" alt="Imprezy szkolne" class="icon" />
         <div class="name">Imprezy szkolne</div>
         <div class="desc">
           Samorząd zajmuje się organizacją imprez szkolnych takich jak dzień
@@ -42,7 +42,7 @@
       </div>
 
       <div class="service-card">
-        <img src="/heart-health.png" class="logo" />
+        <img src="/heart-health.png" alt="Życie szkoły" class="icon" />
         <div class="name">Życie szkoły</div>
         <div class="desc">
           Zajmujemy się poprawianiem samopoczucia ucznia w szkole i dodawaniem
@@ -51,7 +51,7 @@
       </div>
 
       <div class="service-card">
-        <img src="/idea.png" class="logo" />
+        <img src="/idea.png" alt="Innowacyjność" class="icon" />
         <div class="name">Innowacyjność</div>
         <div class="desc">
           Planujemy w tym roku wprowadzić wypożyczanie ładowarek do telefonu w
@@ -94,12 +94,14 @@
   align-items: center;
   overflow: hidden;
 
-  img {
+  .logo {
     position: relative;
     z-index: 1;
     display: block;
     margin: auto;
     margin-bottom: 20px;
+    width: 128px;
+    height: 128px;
   }
 
   h1 {
@@ -129,7 +131,7 @@
       text-align: center;
     }
 
-    img {
+    .logo {
       margin-bottom: 5px;
     }
   }
@@ -141,6 +143,10 @@
 
     p {
       text-align: center;
+    }
+
+    .logo {
+      margin-bottom: -15px;
     }
   }
 }
@@ -243,7 +249,7 @@
   margin: 20px;
   border-radius: 5px;
 
-  > .logo {
+  > .icon {
     margin-top: 40px;
     width: 100px;
     height: 100px;

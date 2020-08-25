@@ -18,7 +18,10 @@
             <div class="container">
               <nuxt-link :to="`/projects/${post.slug}`">
                 <div class="img_container">
-                  <img :src="post.previewPhoto.url + '?w=450&h=250'" />
+                  <img
+                    :src="post.previewPhoto.url + '?w=450&h=250'"
+                    :alt="post.previewPhoto.alt"
+                  />
                 </div>
               </nuxt-link>
 
@@ -42,6 +45,7 @@ const ALL_POSTS_QUERY = `
     content
     previewPhoto {
       url
+      alt
     }
     slug
     _createdAt

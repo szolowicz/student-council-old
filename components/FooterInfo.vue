@@ -2,11 +2,11 @@
   <footer>
     <p>
       Wdrożone przez
-      <a target="_blank" href="https://github.com/Lumm1t"
+      <a href="https://github.com/Lumm1t" target="_blank" rel="noopener"
         >Aleksander Szołowicz</a
       >
       i
-      <a target="_blank" href="https://github.com/MentolMen"
+      <a href="https://github.com/MentolMen" target="_blank" rel="noopener"
         >Stanisław Fijołek</a
       >
     </p>
@@ -29,7 +29,7 @@ footer {
 
   p {
     margin: 3px;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.8);
     text-align: center;
   }
 }
