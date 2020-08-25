@@ -33,7 +33,13 @@ export default {
       },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo.png' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.png' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap"'
+      }
+    ]
   },
   /*
    ** Progressive Web App manifest

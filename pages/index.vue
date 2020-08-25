@@ -107,7 +107,7 @@
   h1 {
     position: relative;
     z-index: 1;
-    font-size: 4.2rem;
+    font-size: 3.8rem;
     margin: 0 0 10px;
     line-height: 1;
     text-align: center;
@@ -120,9 +120,11 @@
     font-size: 1.1rem;
     line-height: 1.4;
     text-align: justify;
+    margin: 0;
+    padding: 0;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 600px) {
     h1 {
       font-size: 3.5rem;
     }
@@ -133,6 +135,16 @@
 
     img {
       margin-bottom: 5px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    h1 {
+      font-size: 2.1rem;
+    }
+
+    p {
+      text-align: center;
     }
   }
 }

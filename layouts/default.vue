@@ -8,8 +8,6 @@
 <style lang="scss">
 @import './assets/scss/variables';
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
 body {
   font-family: $mainFont;
   font-weight: 400;
@@ -30,9 +28,12 @@ body {
 }
 
 * {
+  box-sizing: border-box;
+}
+
+*:not(ul, li, p) {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 a {

@@ -5,7 +5,10 @@
     <div v-if="error">{{ error }}</div>
     <div v-else-if="response.post">
       <h1>{{ response.post.title }}</h1>
-      <p>{{ response.post._createdAt | formatData() }}</p>
+      <p>Dodano {{ response.post._createdAt | formatData() }}</p>
+      <p v-if="response.post._createdAt != response.post._updatedAt">
+        Zaktualizowano {{ response.post._updatedAt | formatData() }}
+      </p>
 
       <div v-html="response.post.content"></div>
     </div>
@@ -34,7 +37,8 @@ export default {
             post(filter: { slug: { eq: "${this.$route.params.slug}" } }) {
               title
               content
-              _createdAt
+              _createdAt,
+              _updatedAt
             }
           }
         `

@@ -36,7 +36,7 @@ import { request } from '../../datocms';
 
 const ALL_POSTS_QUERY = `
 {
-  allPosts {
+  allPosts(orderBy: _createdAt_DESC) {
     title
     content
     previewPhoto {

@@ -47,10 +47,9 @@
                 <h2 class="person-title">{{ selectedPersonData.name }}</h2>
                 <p class="person-desc">{{ selectedPersonData.title }}</p>
               </div>
-              <div
-                class="team-detail-bio-content"
-                v-html="selectedPersonData.bio"
-              ></div>
+              <div class="team-detail-bio-content">
+                {{ selectedPersonData.bio }}
+              </div>
             </div>
           </div>
         </div>
@@ -306,6 +305,12 @@ export default {
       margin-bottom: 15px;
       line-height: 25px;
       font-size: 1.5em;
+    }
+
+    @media (max-width: 360px) {
+      &-content {
+        text-align: center;
+      }
     }
   }
   &-header {
