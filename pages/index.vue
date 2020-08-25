@@ -2,7 +2,7 @@
   <div>
     <section class="hero">
       <div class="content">
-        <img src="idea.png" />
+        <img src="logo.png" height="128px" />
 
         <h1>Samorząd uczniowski</h1>
 
@@ -51,7 +51,7 @@
       </div>
 
       <div class="service-card">
-        <img src="/innovation.png" class="logo" />
+        <img src="/idea.png" class="logo" />
         <div class="name">Innowacyjność</div>
         <div class="desc">
           Planujemy w tym roku wprowadzić wypożyczanie ładowarek do telefonu w
@@ -303,7 +303,7 @@
 
 @keyframes pulse {
   0% {
-    transform: scale(0.5);
+    transform: scale(0.7);
   }
 
   100% {

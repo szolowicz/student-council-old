@@ -41,7 +41,7 @@ export default {
    */
   pwa: {
     icon: {
-      source: '/icon.png'
+      fileName: 'logo.png'
     },
     meta: {
       title: 'Samorząd uczniowski ZSM1',
