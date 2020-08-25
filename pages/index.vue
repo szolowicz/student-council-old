@@ -2,25 +2,32 @@
   <div>
     <section class="hero">
       <div class="content">
-        <h2>Samorząd uczniowski</h2>
+        <img src="https://img.icons8.com/dusk/100/000000/idea.png" />
+
+        <h1>Samorząd uczniowski</h1>
+
         <p>
           Polepszanie umiejętności współpracy, sprawnej komunikacji i
           organizacji własnej pracy, poznawanie nowych rzeczy, nowe
           doświadczenia i wyzwania, możliwość poznania samego siebie od innej
           strony, poznanie innych kreatywnych ludzi.
         </p>
+
         <br />
+
         <p>
           To jest właśnie samorząd uczniowski – to my zapewniamy pomysły na
           działania, które polepszają nasze życie w szkole.
         </p>
+
+        <a href="http://zsm1.bydgoszcz.pl/" class="go-back">Powrót</a>
       </div>
       <div class="waves"></div>
 
       <div class="scroll-down"></div>
     </section>
 
-    <h1 class="section_topic">
+    <h1 class="section_topic" name="about-us">
       O nas
     </h1>
 
@@ -70,10 +77,19 @@
 <style lang="scss" scoped>
 @import './assets/scss/variables';
 
+.go-back {
+  z-index: 1;
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  font-size: 20px;
+}
+
 .content {
   max-width: 725px;
   margin: 0 auto;
   padding: 0 20px;
+  margin-bottom: 10%;
 }
 
 @media (max-width: 300px) {
@@ -84,19 +100,25 @@
 
 .hero {
   position: relative;
-  color: white;
   height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
 
-  h2 {
+  img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  h1 {
     position: relative;
     z-index: 1;
     font-size: 4.2rem;
     margin: 0 0 10px;
     line-height: 1;
-    color: rgba(255, 255, 255, 0.9);
     text-align: center;
   }
 
@@ -104,14 +126,17 @@
     position: relative;
     z-index: 1;
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.5);
     line-height: 1.4;
     text-align: justify;
   }
 
   @media (max-width: 320px) {
-    h2 {
+    h1 {
       font-size: 3.5rem;
+    }
+
+    p {
+      text-align: center;
     }
   }
 }
@@ -140,13 +165,13 @@
 
 .waves::before {
   border-radius: 44%;
-  background: rgba(51, 51, 51, 1);
+  background: rgba(245, 245, 245, 1);
   animation: waves 8s linear infinite;
 }
 
 .waves::after {
   border-radius: 44%;
-  background: rgba(51, 51, 51, 0.5);
+  background: rgba(245, 245, 245, 0.5);
   animation: waves 15s linear infinite;
 }
 
@@ -169,7 +194,6 @@
 .scroll-down::before {
   animation: bounce 1s ease infinite;
   bottom: 2rem;
-  color: #fff;
   content: '⬇';
   font-size: 2rem;
   height: 4rem;
@@ -251,7 +275,6 @@
   height: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   margin: 20px;
-  background-color: white;
   border-radius: 5px;
 
   > .logo {
@@ -274,6 +297,13 @@
   > .desc {
     margin: 20px;
     text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .waves,
+  .scroll-down {
+    display: none;
   }
 }
 </style>
