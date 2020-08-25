@@ -13,7 +13,7 @@
             :key="index"
             class="timeline_card"
           >
-            <div class="date">{{ post._createdAt | cutData(10) }}</div>
+            <div class="date">{{ post._createdAt | formatDate() }}</div>
 
             <div class="container">
               <nuxt-link :to="`/projects/${post.slug}`">
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import moment from 'moment';
 import { request } from '../../datocms';
 
 const ALL_POSTS_QUERY = `
@@ -51,8 +52,8 @@ const ALL_POSTS_QUERY = `
 export default {
   name: 'App',
   filters: {
-    cutData(text, length) {
-      return text.substring(0, length);
+    formatDate(value) {
+      return moment(String(value)).locale('pl').format('LL');
     }
   },
   data: () => ({
@@ -85,7 +86,13 @@ export default {
     width: 4px;
     height: 100%;
     margin-left: 60px;
-    margin-top: -160px;
+    margin-top: -260px;
+    padding-bottom: 260px;
+
+    @media (max-width: 600px) {
+      margin-top: -160px;
+      padding-bottom: 160px;
+    }
   }
 }
 

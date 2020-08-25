@@ -6,9 +6,9 @@
     <div v-else-if="response.post" class="post">
       <div class="post-header">
         <h1>{{ response.post.title }}</h1>
-        <p>Dodano {{ response.post._createdAt | formatData() }}</p>
+        <p>Dodano {{ response.post._createdAt | formatDate() }}</p>
         <p v-if="response.post._createdAt != response.post._updatedAt">
-          Zaktualizowano {{ response.post._updatedAt | formatData() }}
+          Zaktualizowano {{ response.post._updatedAt | formatDate() }}
         </p>
       </div>
 
@@ -18,12 +18,13 @@
 </template>
 
 <script>
+import moment from 'moment';
 import { request } from '../../datocms';
 
 export default {
   filters: {
-    formatData(text) {
-      return text.replace(/([A-Z])/g, ' ');
+    formatDate(value) {
+      return moment(String(value)).locale('pl').format('LLLL');
     }
   },
   data: () => ({
