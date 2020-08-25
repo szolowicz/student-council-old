@@ -1,14 +1,14 @@
 <template>
   <div>
-    <nuxt-link :to="`./`" class="go_back">Powrót</nuxt-link>
+    <nuxt-link :to="`./`" class="go-back">Powrót</nuxt-link>
 
     <div v-if="error">{{ error }}</div>
-    <div v-else-if="response.post">
+    <div v-else-if="response.post" class="post-container">
       <h1>{{ response.post.title }}</h1>
-      <p>Dodano {{ response.post._createdAt | formatData() }}</p>
-      <p v-if="response.post._createdAt != response.post._updatedAt">
+      <span>Dodano {{ response.post._createdAt | formatData() }}</span>
+      <span v-if="response.post._createdAt != response.post._updatedAt">
         Zaktualizowano {{ response.post._updatedAt | formatData() }}
-      </p>
+      </span>
 
       <div v-html="response.post.content"></div>
     </div>
@@ -55,3 +55,37 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.post-container {
+  margin: 40px auto;
+  padding: 20px;
+  width: 80vw;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.go-back {
+  z-index: 1;
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  font-size: 20px;
+}
+</style>
