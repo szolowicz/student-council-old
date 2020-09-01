@@ -2,14 +2,15 @@
   <footer>
     <p>
       Wdrożone przez
-      <a href="https://github.com/Lumm1t" target="_blank" rel="noopener"
-        >Aleksander Szołowicz</a
-      >
+      <a href="https://github.com/Lumm1t" target="_blank" rel="noopener">
+        Aleksander Szołowicz
+      </a>
       i
-      <a href="https://github.com/MentolMen" target="_blank" rel="noopener"
-        >Stanisław Fijołek</a
-      >
+      <a href="https://github.com/MentolMen" target="_blank" rel="noopener">
+        Stanisław Fijołek
+      </a>
     </p>
+
     <p>Wersja {{ require('../package.json').version }}</p>
   </footer>
 </template>

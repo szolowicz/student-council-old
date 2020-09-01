@@ -7,21 +7,26 @@
         <div class="data">
           <p class="title">E-mail</p>
           <br />
+
           <p class="subtitle">Samorząd uczniowski</p>
-          <a href="mailto:samorzaduczniowskizsm1@gmail.com"
-            >samorzaduczniowskizsm1(at)gmail.com</a
-          >
+          <a href="mailto:samorzaduczniowskizsm1@gmail.com">
+            samorzaduczniowskizsm1(at)gmail.com
+          </a>
+
           <br /><br />
           <p class="subtitle">Administratorzy strony</p>
           <span>Aleksander Szołowicz</span>
           <br />
-          <a href="mailto:aleksanderszolowicz@gmail.com"
-            >aleksanderszolowicz(at)gmail.com</a
-          >
+          <a href="mailto:aleksanderszolowicz@gmail.com">
+            aleksanderszolowicz(at)gmail.com
+          </a>
+
           <br /><br />
           <span>Stanisław Fijołek</span>
           <br />
-          <a href="mailto:nerkaputina@gmail.com">nerkaputina(at)gmail.com</a>
+          <a href="mailto:nerkaputina@gmail.com">
+            nerkaputina(at)gmail.com
+          </a>
         </div>
 
         <div class="map">

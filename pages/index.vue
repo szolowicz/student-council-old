@@ -22,6 +22,7 @@
 
         <a href="http://zsm1.bydgoszcz.pl/" class="go-back">Powrót</a>
       </div>
+
       <div class="waves"></div>
 
       <div class="scroll-down"></div>
@@ -34,7 +35,9 @@
     <div id="services_container">
       <div class="service-card">
         <img src="/party-baloons.png" alt="Imprezy szkolne" class="icon" />
+
         <div class="name">Imprezy szkolne</div>
+
         <div class="desc">
           Samorząd zajmuje się organizacją imprez szkolnych takich jak dzień
           nauczyciela, dzień chłopaka lub walentynki.
@@ -43,7 +46,9 @@
 
       <div class="service-card">
         <img src="/heart-health.png" alt="Życie szkoły" class="icon" />
+
         <div class="name">Życie szkoły</div>
+
         <div class="desc">
           Zajmujemy się poprawianiem samopoczucia ucznia w szkole i dodawaniem
           udogodnień.
@@ -52,7 +57,9 @@
 
       <div class="service-card">
         <img src="/idea.png" alt="Innowacyjność" class="icon" />
+
         <div class="name">Innowacyjność</div>
+
         <div class="desc">
           Planujemy w tym roku wprowadzić wypożyczanie ładowarek do telefonu w
           sekretariacie, ułatwić przekazywanie informacji o konkursach i ważnych

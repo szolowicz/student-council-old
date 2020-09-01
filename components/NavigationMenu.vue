@@ -14,25 +14,27 @@
         <div class="nav__content">
           <ul class="nav__list" @click="isActive = false">
             <li class="nav__list-item">
-              <nuxt-link :to="`/`" class="hover-target"
-                >Strona główna</nuxt-link
-              >
+              <nuxt-link :to="`/`" class="hover-target">
+                Strona główna
+              </nuxt-link>
             </li>
 
             <li class="nav__list-item">
-              <nuxt-link :to="`/team`" class="hover-target">Zespół</nuxt-link>
+              <nuxt-link :to="`/team`" class="hover-target">
+                Zespół
+              </nuxt-link>
             </li>
 
             <li class="nav__list-item">
-              <nuxt-link :to="`/projects`" class="hover-target"
-                >Projekty</nuxt-link
-              >
+              <nuxt-link :to="`/projects`" class="hover-target">
+                Projekty
+              </nuxt-link>
             </li>
 
             <li class="nav__list-item">
-              <nuxt-link :to="`/contact`" class="hover-target"
-                >Kontakt</nuxt-link
-              >
+              <nuxt-link :to="`/contact`" class="hover-target">
+                Kontakt
+              </nuxt-link>
             </li>
           </ul>
         </div>

@@ -25,13 +25,16 @@
               :src="person.photo.url + '?w=400&h=300'"
               alt="Członek samorządu"
             />
+
             <div class="person-details">
               <h2 class="person-title">{{ person.name }}</h2>
+
               <p class="person-desc">{{ person.title }}</p>
             </div>
           </div>
         </div>
       </div>
+
       <div class="team-detail">
         <div v-if="isOk" class="team-detail-inner">
           <div
@@ -45,12 +48,15 @@
               />
             </div>
           </div>
+
           <div class="team-detail-right">
             <div class="team-detail-bio">
               <div class="team-detail-header">
                 <h2 class="person-title">{{ selectedPersonData.name }}</h2>
+
                 <p class="person-desc">{{ selectedPersonData.title }}</p>
               </div>
+
               <div class="team-detail-bio-content">
                 {{ selectedPersonData.bio }}
               </div>
