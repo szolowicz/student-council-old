@@ -2,7 +2,7 @@
   <div>
     <section class="hero">
       <div class="content">
-        <img src="logo.png" class="logo" alt="Logo samorządu szkolnego" />
+        <img src="/logo.png" class="logo" alt="Logo samorządu szkolnego" />
 
         <h1>Samorząd uczniowski</h1>
 

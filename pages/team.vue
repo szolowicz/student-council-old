@@ -23,7 +23,7 @@
             <img
               class="person-img"
               :src="person.photo.url + '?w=400&h=300'"
-              alt="Członek samorządu"
+              :alt="person.name"
             />
 
             <div class="person-details">
@@ -44,7 +44,7 @@
             <div class="team-detail-photo">
               <img
                 :src="selectedPersonData.photo.url + '?w=400&h=300'"
-                alt=""
+                :alt="selectedPersonData.name"
               />
             </div>
           </div>

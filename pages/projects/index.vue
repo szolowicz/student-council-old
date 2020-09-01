@@ -20,7 +20,7 @@
                 <div class="img_container">
                   <img
                     :src="post.previewPhoto.url + '?w=450&h=250'"
-                    :alt="post.previewPhoto.alt"
+                    :alt="post.title"
                   />
                 </div>
               </nuxt-link>
