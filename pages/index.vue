@@ -76,7 +76,7 @@
 @import './assets/scss/variables';
 
 .hero {
-  background-image: url('http://stow.zsm1.bydgoszcz.pl/wp-content/uploads/2018/11/cropped-bg-1.png');
+  background-image: url('/hero-image.png');
   background-size: 125%;
   background-position: left;
   animation: slide 25s ease infinite;
