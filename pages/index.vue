@@ -1,6 +1,8 @@
 <template>
   <div>
-    <section class="hero">
+    <header class="hero">
+      <div class="moving_gradient"></div>
+
       <div class="content">
         <img src="/logo.png" class="logo" alt="Logo samorządu szkolnego" />
 
@@ -23,10 +25,8 @@
         <a href="http://zsm1.bydgoszcz.pl/" class="go-back">Powrót</a>
       </div>
 
-      <div class="waves"></div>
-
       <div class="scroll-down"></div>
-    </section>
+    </header>
 
     <h1 class="section_topic" name="about-us">
       O nas
@@ -75,12 +75,20 @@
 <style lang="scss" scoped>
 @import './assets/scss/variables';
 
-.go-back {
-  z-index: 1;
-  top: 5px;
-  left: 5px;
-  position: absolute;
-  font-size: 20px;
+.hero {
+  background-image: url('http://stow.zsm1.bydgoszcz.pl/wp-content/uploads/2018/11/cropped-bg-1.png');
+  background-size: 125%;
+  background-position: left;
+  animation: slide 25s ease infinite;
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+
+  @media (max-width: 1150px) {
+    background-size: cover;
+  }
 }
 
 .content {
@@ -88,18 +96,19 @@
   margin: 0 auto;
   padding: 0 20px;
   margin-bottom: 10%;
+  margin-top: 10.5%;
 
   @media (max-width: 300px) {
     padding: 0 5px;
   }
-}
 
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+  .go-back {
+    z-index: 1;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    font-size: 20px;
+  }
 
   .logo {
     position: relative;
@@ -110,7 +119,6 @@
     width: 128px;
     height: 128px;
   }
-
   h1 {
     position: relative;
     z-index: 1;
@@ -120,7 +128,6 @@
     text-align: center;
     animation: pulse 2s;
   }
-
   p {
     position: relative;
     z-index: 1;
@@ -133,70 +140,44 @@
     h1 {
       font-size: 3.5rem;
     }
-
     p {
       text-align: center;
     }
-
     .logo {
       margin-bottom: 5px;
     }
   }
-
   @media (max-width: 320px) {
     h1 {
       font-size: 2.1rem;
     }
-
     p {
       text-align: center;
     }
-
     .logo {
       margin-bottom: -15px;
     }
   }
 }
 
-.waves {
+.moving_gradient {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background-color: $mainColor;
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
-  transition: 500ms;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: 300vw;
-    height: 300vw;
-    top: -65vw;
-    left: 50%;
-    transform: translate(-50%, -75%);
-  }
-
-  &::before {
-    border-radius: 44%;
-    background: rgba(245, 245, 245, 1);
-    animation: waves 8s linear infinite;
-  }
-
-  &::after {
-    border-radius: 44%;
-    background: rgba(245, 245, 245, 0.5);
-    animation: waves 15s linear infinite;
-  }
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(lighten($mainColor, 5), darken($secondColor, 10));
+  animation: moving 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  opacity: 0.6;
 }
 
 .scroll-down {
   height: 100vh;
   position: absolute;
   width: 100%;
-
   &::before {
     animation: bounce 1s ease infinite;
     bottom: 2rem;
@@ -211,6 +192,10 @@
     position: absolute;
     text-align: center;
     width: 6rem;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
   }
 }
 
@@ -278,30 +263,32 @@
   }
 }
 
-@media (max-width: 700px) {
-  .waves,
-  .scroll-down {
-    display: none;
+@keyframes slide {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
   }
 }
 
-@keyframes waves {
+@keyframes moving {
   0% {
-    transform: translate(-50%, -75%) rotate(0deg);
+    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(2, 2, 1);
+    -webkit-transform: scale3d(2, 2, 1);
   }
 
   100% {
-    transform: translate(-50%, -75%) rotate(360deg);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.7);
-  }
-
-  100% {
-    transform: scale(1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
   }
 }
 
