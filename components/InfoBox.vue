@@ -43,7 +43,7 @@
 
   &-content {
     font-size: 16px;
-    padding: 20px;
+    padding-top: 20px;
   }
 }
 </style>

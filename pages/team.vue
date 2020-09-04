@@ -10,7 +10,7 @@
       <template #content>
         Szukamy osób, które są zainteresowane uczestnictwem w samorządzie
         szkolnym. <br />
-        Chcesz zaangażować się bardziej w życie twojej szkoły? Masz ciekawe
+        Chcesz zaangażować się bardziej w życie Twojej szkoły? Masz ciekawe
         pomysły? Jesteś pełen energii do pozytywnej i produktywnej pracy? <br />
         Zgłoś się do opiekuna samorządu, Pani Anny Szymkowiak, sala 15.
       </template>

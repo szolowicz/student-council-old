@@ -108,6 +108,14 @@
     left: 5px;
     position: absolute;
     font-size: 20px;
+    background: linear-gradient(currentColor, currentColor) bottom / 0 0.1em
+      no-repeat;
+    transition: 1s background-size;
+
+    &:hover {
+      color: darken($secondColor, 15);
+      background-size: 100% 0.1em;
+    }
   }
 
   .logo {

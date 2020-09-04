@@ -101,7 +101,7 @@ export default {
 
   img {
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     height: auto;
   }
 
@@ -123,5 +123,12 @@ export default {
   left: 5px;
   position: absolute;
   font-size: 20px;
+  background: linear-gradient(currentColor, currentColor) bottom / 0 0.1em
+    no-repeat;
+  transition: 1s background-size;
+
+  &:hover {
+    background-size: 100% 0.1em;
+  }
 }
 </style>
