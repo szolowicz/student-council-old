@@ -4,7 +4,7 @@
 
     <div id="contact_container" class="fullpadding">
       <div class="smallbox slideable">
-        <div class="data">
+        <div>
           <p class="title">E-mail</p>
           <br />
 
@@ -29,12 +29,18 @@
           </a>
         </div>
 
-        <div class="map">
+        <div>
           <p class="title">Odwiedź nas</p>
-          <br />
-          ul. Świętej Trójcy 37
-          <br />
-          85-224 Bydgoszcz
+
+          <p class="map-info">
+            Sala 15
+            <br />
+            Zespół Szkół Mechanicznych nr 1
+            <br />
+            ul. Świętej Trójcy 37
+            <br />
+            85-224 Bydgoszcz
+          </p>
         </div>
       </div>
     </div>
@@ -80,11 +86,15 @@ export default {
   }
 
   .subtitle {
-    margin: 5px 0 5px 0;
+    margin: 1px 0 5px 0;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 20px;
     color: rgba(0, 0, 0, 0.8);
+  }
+
+  .map-info {
+    margin-top: 15px;
   }
 
   & > div {

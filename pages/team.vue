@@ -2,6 +2,20 @@
   <div>
     <TitleBox v-if="!isSelected">Zespół</TitleBox>
 
+    <InfoBox v-if="!isSelected">
+      <template #header>
+        SAMORZĄD CIĘ POTRZEBUJE!
+      </template>
+
+      <template #content>
+        Szukamy osób, które są zainteresowane uczestnictwem w samorządzie
+        szkolnym. <br />
+        Chcesz zaangażować się bardziej w życie twojej szkoły? Masz ciekawe
+        pomysły? Jesteś pełen energii do pozytywnej i produktywnej pracy? <br />
+        Zgłoś się do opiekuna samorządu, Pani Anny Szymkowiak, sala 15.
+      </template>
+    </InfoBox>
+
     <div v-if="error">{{ error }}</div>
     <div
       v-else-if="response.allTeamMembers"
