@@ -23,7 +23,7 @@ footer {
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
-  margin: 80px 0 0 0;
+  margin-top: 50px;
   padding-bottom: 20px;
   background-color: whitesmoke;
   box-shadow: 0 0 20px 20px whitesmoke;

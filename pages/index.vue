@@ -79,7 +79,7 @@
   background-image: url('/hero-image.png');
   background-size: 125%;
   background-position: left;
-  animation: slide 25s ease infinite;
+  animation: slide 40s ease infinite;
   transform: translate3d(0, 0, 0);
   width: 100%;
   height: 100vh;
@@ -171,7 +171,7 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   overflow: hidden;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .scroll-down {
@@ -200,7 +200,7 @@
 }
 
 .section_topic {
-  margin-top: 15px;
+  margin-top: 35px;
   font-weight: 700;
   font-size: 45px;
   color: $mainColor;
