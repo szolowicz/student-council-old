@@ -2,8 +2,8 @@
   <div>
     <TitleBox>Kontakt</TitleBox>
 
-    <div id="contact_container" class="fullpadding">
-      <div class="smallbox slideable">
+    <div class="contact_container">
+      <div class="smallbox">
         <div>
           <p class="title">E-mail</p>
           <br />
@@ -58,7 +58,7 @@ export default {
 <style lang="scss" scoped>
 /* stylelint-disable */
 
-#contact_container {
+.contact_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

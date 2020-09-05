@@ -172,12 +172,13 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(lighten($mainColor, 5), darken($secondColor, 10));
-  animation: moving 6s ease-in-out infinite;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  background: linear-gradient(
+    -45deg,
+    lighten($mainColor, 3),
+    darken($secondColor, 3)
+  );
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
   overflow: hidden;
   opacity: 0.8;
 }
@@ -188,7 +189,7 @@
   width: 100%;
   &::before {
     animation: bounce 1s ease infinite;
-    bottom: 2rem;
+    bottom: 1.7rem;
     content: '⬇';
     font-size: 2rem;
     height: 4rem;
@@ -283,26 +284,21 @@
   }
 }
 
-@keyframes moving {
+@keyframes gradient {
   0% {
-    transform: scale3d(1, 1, 1);
-    -webkit-transform: scale3d(1, 1, 1);
+    background-position: 0% 50%;
   }
-
   50% {
-    transform: scale3d(2, 2, 1);
-    -webkit-transform: scale3d(2, 2, 1);
+    background-position: 100% 50%;
   }
-
   100% {
-    transform: scale3d(1, 1, 1);
-    -webkit-transform: scale3d(1, 1, 1);
+    background-position: 0% 50%;
   }
 }
 
 @keyframes bounce {
   50% {
-    transform: translateY(-50%);
+    transform: translateY(-30%);
   }
 }
 </style>

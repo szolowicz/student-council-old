@@ -248,7 +248,6 @@ $radius: 30px;
   transform: translate(30px, 0%);
   transition: opacity 0.1s ease, transform 0.2s ease;
   transition-delay: 0.2s;
-  margin-top: 7px;
   margin-bottom: 7px;
 }
 
