@@ -1,9 +1,9 @@
 <template>
   <div class="info-box">
-    <div class="info-box-header">
+    <div class="info-box__header">
       <h2><slot name="header"></slot></h2>
 
-      <div class="info-box-content"><slot name="content"></slot></div>
+      <div class="info-box__content"><slot name="content"></slot></div>
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@
     width: 95vw;
   }
 
-  &-header {
+  &__header {
     background: -webkit-gradient(
       linear,
       right top,
@@ -41,7 +41,7 @@
     padding: 10px;
   }
 
-  &-content {
+  &__content {
     font-size: 16px;
     padding-top: 20px;
   }

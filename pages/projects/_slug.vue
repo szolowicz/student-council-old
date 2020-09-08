@@ -4,7 +4,7 @@
 
     <div v-if="error">{{ error }}</div>
     <div v-else-if="response.post" class="post">
-      <div class="post-header">
+      <div class="post__header">
         <h1>{{ response.post.title }}</h1>
 
         <p>Dodano {{ response.post._createdAt | formatDate() }}</p>
@@ -14,7 +14,7 @@
         </p>
       </div>
 
-      <div class="post-content" v-html="response.post.content"></div>
+      <div class="post__content" v-html="response.post.content"></div>
     </div>
   </div>
 </template>
@@ -80,7 +80,7 @@ export default {
     width: 95vw;
   }
 
-  &-header {
+  &__header {
     background: -webkit-gradient(
       linear,
       right top,
@@ -95,7 +95,7 @@ export default {
     padding: 10px;
   }
 
-  &-content {
+  &__content {
     padding: 20px;
   }
 
@@ -125,6 +125,7 @@ export default {
   font-size: 20px;
   background: linear-gradient(currentColor, currentColor) bottom / 0 0.1em
     no-repeat;
+  background-position: left bottom;
   transition: 1s background-size;
 
   &:hover {

@@ -4,20 +4,22 @@
 
     <div v-if="error">{{ error }}</div>
     <div v-else-if="response.allPosts">
-      <div class="pageblock_timeline">
-        <div id="timeline_line"></div>
+      <div class="timeline">
+        <div class="timeline__line"></div>
 
-        <div id="timeline_container">
+        <div class="timeline__container">
           <div
             v-for="(post, index) in response.allPosts"
             :key="index"
-            class="timeline_card"
+            class="timeline__card"
           >
-            <div class="date">{{ post._createdAt | formatDate() }}</div>
+            <div class="timeline__card__date">
+              {{ post._createdAt | formatDate() }}
+            </div>
 
-            <div class="container">
+            <div class="project-container">
               <nuxt-link :to="`/projects/${post.slug}`">
-                <div class="img_container">
+                <div class="project-container__image">
                   <img
                     :src="post.previewPhoto.url + '?w=450&h=250'"
                     :alt="post.title"
@@ -25,7 +27,7 @@
                 </div>
               </nuxt-link>
 
-              <div class="title">{{ post.title }}</div>
+              <div class="project-container__title">{{ post.title }}</div>
             </div>
           </div>
         </div>
@@ -82,8 +84,12 @@ export default {
 <style lang="scss" scoped>
 @import './assets/scss/variables';
 
-#timeline {
-  &_line {
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+
+  &__line {
     position: fixed;
     z-index: -1;
     background-color: $mainColor;
@@ -98,120 +104,79 @@ export default {
       padding-bottom: 160px;
     }
   }
-}
 
-.pageblock_timeline {
-  position: relative;
-  max-width: 700px;
-  margin: 0 auto;
-}
+  &__card {
+    min-height: 100px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
 
-.timeline_card {
-  min-height: 100px;
-  margin-bottom: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
+    &__date {
+      height: 80px;
+      margin-left: 64px;
+      font-size: 26px;
+      line-height: 80px;
+      vertical-align: middle;
+      font-weight: 600;
+      color: $secondColor;
+      opacity: 0.7;
+    }
 
-  div.date {
-    height: 80px;
-    margin-left: 64px;
-    font-size: 26px;
-    line-height: 80px;
-    vertical-align: middle;
-    font-weight: 600;
-    color: $secondColor;
-    opacity: 0.7;
-  }
-
-  div.container {
-    position: relative;
-
-    div.img_container {
+    .project-container {
       position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      height: 250px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease-in-out !important;
-      transform: scale(1.075) !important;
-      z-index: 1;
-      cursor: pointer;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        background-position: center;
+      &__image {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 250px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease-in-out !important;
+        transform: scale(1) !important;
+        z-index: 1;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.05) !important;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            7deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(100, 100, 100, 0) 60%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          background-position: center;
+        }
       }
-    }
 
-    @media (hover: hover) {
-      div.img_container:hover {
-        transform: scale(1.05) !important;
-      }
-    }
-
-    div.img_container::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        7deg,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(100, 100, 100, 0) 60%,
-        rgba(255, 255, 255, 0) 100%
-      );
-    }
-
-    div.title {
-      position: absolute;
-      display: flex;
-      height: 230px;
-      width: calc(100% - 40px);
-      top: 0;
-      left: 0;
-      align-items: flex-end;
-      padding: 0 20px 20px 20px;
-      color: rgba(255, 255, 255, 1);
-      font-size: 30px;
-      font-weight: 700;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    div.text {
-      overflow: hidden;
-      padding: 20px;
-      max-height: 1000px;
-      color: rgba(0, 0, 0, 0.8);
-      font-size: 14px;
-      transition: opacity 0.2s ease-in-out, max-height 0.2s ease-in-out,
-        padding 0.2s ease-in-out;
-      z-index: 0;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      background: white;
-    }
-  }
-
-  div.container:not(.open) {
-    div.text {
-      opacity: 0;
-      max-height: 0;
-      padding: 0 20px;
-    }
-
-    div.img_container {
-      transform: scale(1) !important;
-    }
-
-    @media (hover: hover) {
-      div.img_container:hover {
-        transform: scale(1.05) !important;
+      &__title {
+        position: absolute;
+        display: flex;
+        height: 230px;
+        width: calc(100% - 40px);
+        top: 0;
+        left: 0;
+        align-items: flex-end;
+        padding: 0 20px 20px 20px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 30px;
+        font-weight: 700;
+        pointer-events: none;
+        z-index: 1;
       }
     }
   }

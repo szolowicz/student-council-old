@@ -1,6 +1,6 @@
 <template>
-  <div class="title_box">
-    <h1 class="title_box_text">
+  <div class="title-box">
+    <h1 class="title-box__text">
       <slot></slot>
     </h1>
   </div>
@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 @import './assets/scss/variables';
 
-.title_box {
+.title-box {
   height: 250px;
   background: -webkit-gradient(
     linear,
@@ -32,7 +32,7 @@
     height: 150px;
   }
 
-  &_text {
+  &__text {
     width: 100%;
     max-width: 1400px;
     font-size: calc(38px + 2vw);

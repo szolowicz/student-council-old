@@ -1,10 +1,10 @@
 <template>
   <div>
     <header class="hero">
-      <div class="moving_gradient"></div>
-      <div class="pattern"></div>
+      <div class="hero__gradient"></div>
+      <div class="hero__pattern"></div>
 
-      <div class="content">
+      <div class="hero__content">
         <img src="/logo.png" class="logo" alt="Logo samorządu szkolnego" />
 
         <h1>Samorząd uczniowski</h1>
@@ -31,35 +31,35 @@
 
     <h1 class="section_topic" name="about-us">O nas</h1>
 
-    <div id="services_container">
-      <div class="service-card">
+    <div class="about-us">
+      <div class="about-us__card">
         <img src="/party-baloons.png" alt="Imprezy szkolne" class="icon" />
 
         <div class="name">Imprezy szkolne</div>
 
-        <div class="desc">
+        <div class="description">
           Samorząd zajmuje się organizacją imprez szkolnych takich jak dzień
           nauczyciela, dzień chłopaka lub walentynki.
         </div>
       </div>
 
-      <div class="service-card">
+      <div class="about-us__card">
         <img src="/heart-health.png" alt="Życie szkoły" class="icon" />
 
         <div class="name">Życie szkoły</div>
 
-        <div class="desc">
+        <div class="description">
           Zajmujemy się poprawianiem samopoczucia ucznia w szkole i dodawaniem
           udogodnień.
         </div>
       </div>
 
-      <div class="service-card">
+      <div class="about-us__card">
         <img src="/idea.png" alt="Innowacyjność" class="icon" />
 
         <div class="name">Innowacyjność</div>
 
-        <div class="desc">
+        <div class="description">
           Planujemy w tym roku wprowadzić wypożyczanie ładowarek do telefonu w
           sekretariacie, ułatwić przekazywanie informacji o konkursach i ważnych
           wydarzeniach szkolnych.
@@ -91,69 +91,97 @@
   @media (max-width: 1150px) {
     background-size: cover;
   }
-}
 
-.content {
-  max-width: 725px;
-  margin-bottom: 12%;
-  padding: 0 20px;
-
-  @media (max-width: 300px) {
-    padding: 0 5px;
+  &__gradient {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+      -45deg,
+      lighten($mainColor, 3),
+      darken($secondColor, 3)
+    );
+    background-size: 100%;
+    overflow: hidden;
+    opacity: 0.8;
   }
 
-  .logo {
-    position: relative;
-    z-index: 1;
-    display: block;
-    margin: auto;
-    margin-bottom: 20px;
-    width: 128px;
-    height: 128px;
+  &__pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent url('https://obnoxious.club/assets/others/dot.png')
+      repeat 0 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    opacity: 1;
   }
 
-  h1 {
-    position: relative;
-    z-index: 1;
-    font-size: 3.8rem;
-    margin: 0 0 10px;
-    line-height: 1;
-    text-align: center;
-  }
+  &__content {
+    max-width: 725px;
+    margin-bottom: 12%;
+    padding: 0 20px;
 
-  p {
-    position: relative;
-    z-index: 1;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    text-align: justify;
-  }
-
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 3.5rem;
-    }
-
-    p {
-      text-align: center;
+    @media (max-width: 300px) {
+      padding: 0 5px;
     }
 
     .logo {
-      margin-bottom: 5px;
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin: auto;
+      margin-bottom: 20px;
+      width: 128px;
+      height: 128px;
     }
-  }
 
-  @media (max-width: 320px) {
     h1 {
-      font-size: 2.1rem;
-    }
-
-    p {
+      position: relative;
+      z-index: 1;
+      font-size: 3.8rem;
+      margin: 0 0 10px;
+      line-height: 1;
       text-align: center;
     }
 
-    .logo {
-      margin-bottom: -15px;
+    p {
+      position: relative;
+      z-index: 1;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      text-align: justify;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 5px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      h1 {
+        font-size: 2.1rem;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: -15px;
+      }
     }
   }
 }
@@ -166,6 +194,7 @@
   font-size: 20px;
   background: linear-gradient(currentColor, currentColor) bottom / 0 0.1em
     no-repeat;
+  background-position: left bottom;
   transition: 1s background-size, 0.3s color;
   color: white;
 
@@ -173,34 +202,6 @@
     color: darken($secondColor, 15);
     background-size: 100% 0.1em;
   }
-}
-
-.pattern {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: transparent url('https://obnoxious.club/assets/others/dot.png')
-    repeat 0 0;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  z-index: -1;
-  opacity: 1;
-}
-
-.moving_gradient {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-    -45deg,
-    lighten($mainColor, 3),
-    darken($secondColor, 3)
-  );
-  background-size: 100%;
-  overflow: hidden;
-  opacity: 0.8;
 }
 
 .scroll-down {
@@ -244,7 +245,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-#services_container {
+.about-us {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -253,40 +254,40 @@
   align-items: flex-start;
   max-width: 1500px;
   margin: auto;
-}
 
-.service-card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: stretch;
-  align-items: stretch;
-  width: 300px;
-  height: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  margin: 20px;
-  border-radius: 5px;
-
-  > .icon {
-    margin-top: 40px;
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    align-self: center;
-  }
-
-  > .name {
-    margin-top: 20px;
-    font-size: 20px;
-    align-self: center;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-
-  > .desc {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     margin: 20px;
-    text-align: center;
+    border-radius: 5px;
+
+    > .icon {
+      margin-top: 40px;
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      align-self: center;
+    }
+
+    > .name {
+      margin-top: 20px;
+      font-size: 20px;
+      align-self: center;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    > .description {
+      margin: 20px;
+      text-align: center;
+    }
   }
 }
 

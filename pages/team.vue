@@ -19,7 +19,6 @@
     <div v-if="error">{{ error }}</div>
     <div
       v-else-if="response.allTeamMembers"
-      id="app"
       :class="[
         'container',
         isSelected ? 'container-selected' : '',
@@ -43,7 +42,7 @@
             <div class="person-details">
               <h2 class="person-title">{{ person.name }}</h2>
 
-              <p class="person-desc">{{ person.title }}</p>
+              <p class="person-description">{{ person.title }}</p>
             </div>
           </div>
         </div>
@@ -68,7 +67,7 @@
               <div class="team-detail-header">
                 <h2 class="person-title">{{ selectedPersonData.name }}</h2>
 
-                <p class="person-desc">{{ selectedPersonData.title }}</p>
+                <p class="person-description">{{ selectedPersonData.title }}</p>
               </div>
 
               <div class="team-detail-bio-content">
@@ -246,7 +245,7 @@ export default {
     font-size: 1.9em;
   }
 
-  &-desc {
+  &-description {
     color: white;
     margin-top: 10px;
     text-transform: uppercase;
@@ -426,7 +425,7 @@ export default {
       color: black;
     }
 
-    .person-desc {
+    .person-description {
       color: black;
       font-size: 1em;
     }

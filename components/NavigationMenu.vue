@@ -6,7 +6,7 @@
           <span class="menu-icon__line menu-icon__line-left"></span>
           <span class="menu-icon__line"></span>
           <span
-            class="menu-icon__line menu-icon__line_last menu-icon__line-right"
+            class="menu-icon__line menu-icon__line-last menu-icon__line-right"
           ></span>
         </div>
       </div>
@@ -101,38 +101,28 @@ $radius: 30px;
   width: 80px;
   transition: border-radius linear 0.8s, background-color 0.3s ease;
   border-bottom-left-radius: $radius;
-
-  @media (min-width: 1500px) {
-    border-bottom-right-radius: $radius;
-  }
-}
-
-.nav-but-wrap::before {
-  opacity: 0;
-  content: '';
-  width: 80px;
-  height: 80px;
-  border-bottom-left-radius: $radius;
-  z-index: -10;
-  position: absolute;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-  transition: border-radius linear 0.8s, box-shadow 0.3s ease;
-
-  @media (min-width: 1500px) {
-    border-bottom-right-radius: $radius;
-  }
-}
-
-.nav-but-wrap {
   background-color: white;
-}
 
-.nav-but-wrap::before {
-  opacity: 1;
-}
+  @media (min-width: 1500px) {
+    border-bottom-right-radius: $radius;
+  }
 
-.menu-icon__line {
-  background-color: black;
+  &::before {
+    opacity: 0;
+    content: '';
+    width: 80px;
+    height: 80px;
+    border-bottom-left-radius: $radius;
+    z-index: -10;
+    position: absolute;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    transition: border-radius linear 0.8s, box-shadow 0.3s ease;
+    opacity: 1;
+
+    @media (min-width: 1500px) {
+      border-bottom-right-radius: $radius;
+    }
+  }
 }
 
 .menu-icon {
@@ -142,40 +132,41 @@ $radius: 30px;
   cursor: pointer;
   align-self: center;
   display: block;
-}
 
-.menu-icon__line {
-  height: 2px;
-  width: 30px;
-  display: block;
-  background-color: black;
-  margin-bottom: 7px;
-  cursor: pointer;
-  -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
-  transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease, background-color 0.5s ease;
-  transition: transform 0.2s ease, background-color 0.5s ease,
-    -webkit-transform 0.2s ease;
-}
+  &__line {
+    height: 2px;
+    width: 30px;
+    display: block;
+    background-color: black;
+    margin-bottom: 7px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
+    transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.5s ease;
+    transition: transform 0.2s ease, background-color 0.5s ease,
+      -webkit-transform 0.2s ease;
+    background-color: black;
 
-.menu-icon__line_last {
-  margin-bottom: 0;
-}
+    &-last {
+      margin-bottom: 0;
+    }
 
-.menu-icon__line-left {
-  width: 16.5px;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
-}
+    &-left {
+      width: 16.5px;
+      -webkit-transition: all 200ms linear;
+      transition: all 200ms linear;
+    }
 
-.menu-icon__line-right {
-  width: 16.5px;
-  float: right;
-  -webkit-transition: all 200ms linear;
-  -moz-transition: all 200ms linear;
-  -o-transition: all 200ms linear;
-  -ms-transition: all 200ms linear;
-  transition: all 200ms linear;
+    &-right {
+      width: 16.5px;
+      float: right;
+      -webkit-transition: all 200ms linear;
+      -moz-transition: all 200ms linear;
+      -o-transition: all 200ms linear;
+      -ms-transition: all 200ms linear;
+      transition: all 200ms linear;
+    }
+  }
 }
 
 .menu-icon:hover .menu-icon__line-left,
@@ -366,58 +357,14 @@ $radius: 30px;
     -webkit-transform 0.3s ease;
 }
 
-.nav-active .nav__list-item:nth-child(0) {
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-}
+$delay: 0.4;
 
-.nav-active .nav__list-item:nth-child(1) {
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-}
+@for $link from 0 through 4 {
+  $delay: $delay + 0.1;
 
-.nav-active .nav__list-item:nth-child(2) {
-  -webkit-transition-delay: 0.6s;
-  transition-delay: 0.6s;
-}
-
-.nav-active .nav__list-item:nth-child(3) {
-  -webkit-transition-delay: 0.7s;
-  transition-delay: 0.7s;
-}
-
-.nav-active .nav__list-item:nth-child(4) {
-  -webkit-transition-delay: 0.8s;
-  transition-delay: 0.8s;
-}
-
-.nav-active .nav__list-item:nth-child(5) {
-  -webkit-transition-delay: 0.9s;
-  transition-delay: 0.9s;
-}
-
-.nav-active .nav__list-item:nth-child(6) {
-  -webkit-transition-delay: 1s;
-  transition-delay: 1s;
-}
-
-.nav-active .nav__list-item:nth-child(7) {
-  -webkit-transition-delay: 1.1s;
-  transition-delay: 1.1s;
-}
-
-.nav-active .nav__list-item:nth-child(8) {
-  -webkit-transition-delay: 1.2s;
-  transition-delay: 1.2s;
-}
-
-.nav-active .nav__list-item:nth-child(9) {
-  -webkit-transition-delay: 1.3s;
-  transition-delay: 1.3s;
-}
-
-.nav-active .nav__list-item:nth-child(10) {
-  -webkit-transition-delay: 1.4s;
-  transition-delay: 1.4s;
+  .nav-active .nav__list-item:nth-child(#{$link}) {
+    -webkit-transition-delay: #{$delay}s;
+    transition-delay: #{$delay}s;
+  }
 }
 </style>

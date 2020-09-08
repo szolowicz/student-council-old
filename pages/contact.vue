@@ -2,8 +2,8 @@
   <div>
     <TitleBox>Kontakt</TitleBox>
 
-    <div class="contact_container">
-      <div class="smallbox">
+    <div class="contact">
+      <div class="contact__box">
         <div>
           <p class="title">E-mail</p>
           <br />
@@ -58,59 +58,59 @@ export default {
 <style lang="scss" scoped>
 /* stylelint-disable */
 
-.contact_container {
+.contact {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
 
-.smallbox {
-  margin: 20px;
-  width: 100%;
-  min-width: 220px;
-  max-width: 350px;
-  min-height: 350px;
-  background-color: white;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  white-space: pre-wrap; /* css-3 */
-  word-break: break-all;
-  white-space: normal;
-
-  .title {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 24px;
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  .subtitle {
-    margin: 1px 0 5px 0;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.8);
-  }
-
-  .map-info {
-    margin-top: 15px;
-  }
-
-  & > div {
+  &__box {
     margin: 20px;
-  }
+    width: 100%;
+    min-width: 220px;
+    max-width: 350px;
+    min-height: 350px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    white-space: pre-wrap; /* css-3 */
+    word-break: break-all;
+    white-space: normal;
 
-  @media (max-width: 300px) {
     .title {
-      font-size: 22px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.7);
     }
 
     .subtitle {
-      font-size: 14px;
+      margin: 1px 0 5px 0;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .map-info {
+      margin-top: 15px;
+    }
+
+    & > div {
+      margin: 20px;
+    }
+
+    @media (max-width: 300px) {
+      .title {
+        font-size: 22px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+      }
     }
   }
 }
