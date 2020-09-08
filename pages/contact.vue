@@ -77,11 +77,14 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  white-space: pre-wrap; /* css-3 */
+  word-break: break-all;
+  white-space: normal;
 
   .title {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 24px;
     color: rgba(0, 0, 0, 0.7);
   }
 
@@ -89,7 +92,7 @@ export default {
     margin: 1px 0 5px 0;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     color: rgba(0, 0, 0, 0.8);
   }
 
@@ -103,11 +106,11 @@ export default {
 
   @media (max-width: 300px) {
     .title {
-      font-size: 28px;
+      font-size: 22px;
     }
 
     .subtitle {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 }

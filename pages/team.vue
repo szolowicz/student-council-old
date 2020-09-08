@@ -243,7 +243,7 @@ export default {
 
   &-title {
     color: white;
-    font-size: 2em;
+    font-size: 1.9em;
   }
 
   &-desc {
@@ -258,11 +258,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    &:hover {
-      .person {
-        opacity: 0.6;
-      }
-    }
   }
 
   &:hover {
