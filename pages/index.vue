@@ -2,6 +2,7 @@
   <div>
     <header class="hero">
       <div class="moving_gradient"></div>
+      <div class="pattern"></div>
 
       <div class="content">
         <img src="/logo.png" class="logo" alt="Logo samorządu szkolnego" />
@@ -21,16 +22,14 @@
           To jest właśnie samorząd uczniowski – to my zapewniamy pomysły na
           działania, które polepszają nasze życie w szkole.
         </p>
-
-        <a href="http://zsm1.bydgoszcz.pl/" class="go-back">Powrót</a>
       </div>
 
       <div class="scroll-down"></div>
     </header>
 
-    <h1 class="section_topic" name="about-us">
-      O nas
-    </h1>
+    <a href="http://zsm1.bydgoszcz.pl/" class="go-back">Powrót</a>
+
+    <h1 class="section_topic" name="about-us">O nas</h1>
 
     <div id="services_container">
       <div class="service-card">
@@ -79,12 +78,15 @@
   background-image: url('/hero-image.png');
   background-size: 125%;
   background-position: left;
-  animation: slide 40s ease infinite;
+  animation: slide 60s ease infinite;
   transform: translate3d(0, 0, 0);
   width: 100%;
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  color: white;
 
   @media (max-width: 1150px) {
     background-size: cover;
@@ -93,29 +95,11 @@
 
 .content {
   max-width: 725px;
-  margin: 0 auto;
+  margin-bottom: 12%;
   padding: 0 20px;
-  margin-bottom: 10%;
-  margin-top: 10.5%;
 
   @media (max-width: 300px) {
     padding: 0 5px;
-  }
-
-  .go-back {
-    z-index: 1;
-    top: 5px;
-    left: 5px;
-    position: absolute;
-    font-size: 20px;
-    background: linear-gradient(currentColor, currentColor) bottom / 0 0.1em
-      no-repeat;
-    transition: 1s background-size;
-
-    &:hover {
-      color: darken($secondColor, 15);
-      background-size: 100% 0.1em;
-    }
   }
 
   .logo {
@@ -127,6 +111,7 @@
     width: 128px;
     height: 128px;
   }
+
   h1 {
     position: relative;
     z-index: 1;
@@ -134,8 +119,8 @@
     margin: 0 0 10px;
     line-height: 1;
     text-align: center;
-    animation: pulse 2s;
   }
+
   p {
     position: relative;
     z-index: 1;
@@ -148,24 +133,60 @@
     h1 {
       font-size: 3.5rem;
     }
+
     p {
       text-align: center;
     }
+
     .logo {
       margin-bottom: 5px;
     }
   }
+
   @media (max-width: 320px) {
     h1 {
       font-size: 2.1rem;
     }
+
     p {
       text-align: center;
     }
+
     .logo {
       margin-bottom: -15px;
     }
   }
+}
+
+.go-back {
+  z-index: 1;
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  font-size: 20px;
+  background: linear-gradient(currentColor, currentColor) bottom / 0 0.1em
+    no-repeat;
+  transition: 1s background-size, 0.3s color;
+  color: white;
+
+  &:hover {
+    color: darken($secondColor, 15);
+    background-size: 100% 0.1em;
+  }
+}
+
+.pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://obnoxious.club/assets/others/dot.png')
+    repeat 0 0;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  opacity: 1;
 }
 
 .moving_gradient {
@@ -177,8 +198,7 @@
     lighten($mainColor, 3),
     darken($secondColor, 3)
   );
-  background-size: 400% 400%;
-  animation: gradient 7s ease infinite;
+  background-size: 100%;
   overflow: hidden;
   opacity: 0.8;
 }
@@ -222,8 +242,6 @@
   background-position: 50%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: tracking-in-contract 0.6s ease-in-out;
-  animation: tracking-in-contract 0.6s ease-in-out;
 }
 
 #services_container {
@@ -281,18 +299,6 @@
   }
   100% {
     background-position: left;
-  }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 

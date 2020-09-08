@@ -41,8 +41,6 @@
     margin: 0 50px 10px;
     font-weight: 600;
     color: #f5f5f5;
-    -webkit-animation: show-fromleft 0.6s ease-in-out;
-    animation: show-fromleft 0.6s ease-in-out;
   }
 }
 </style>

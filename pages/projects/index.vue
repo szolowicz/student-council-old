@@ -125,6 +125,7 @@ export default {
 
   div.container {
     position: relative;
+
     div.img_container {
       position: relative;
       border-radius: 20px;
