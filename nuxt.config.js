@@ -38,7 +38,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/logo.png' },
+      { rel: 'icon', type: 'image/x-icon', href: 'logo.png' },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap'
@@ -65,6 +65,7 @@ export default {
       short_name: 'ZSM1 SU',
       description:
         'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy',
+      theme_color: '#484f99',
       lang: 'pl'
     }
   },
@@ -104,5 +105,8 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
+  router: {
+    base: '/strony/samorzad/'
+  }
 };

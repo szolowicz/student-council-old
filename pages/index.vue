@@ -5,7 +5,7 @@
       <div class="hero__pattern"></div>
 
       <div class="hero__content">
-        <img src="/logo.png" class="logo" alt="Logo samorządu szkolnego" />
+        <img src="logo.png" class="logo" alt="Logo samorządu szkolnego" />
 
         <h1>Samorząd uczniowski</h1>
 
@@ -33,7 +33,7 @@
 
     <div class="about-us">
       <div class="about-us__card">
-        <img src="/party-baloons.png" alt="Imprezy szkolne" class="icon" />
+        <img src="party-baloons.png" alt="Imprezy szkolne" class="icon" />
 
         <div class="name">Imprezy szkolne</div>
 
@@ -44,7 +44,7 @@
       </div>
 
       <div class="about-us__card">
-        <img src="/heart-health.png" alt="Życie szkoły" class="icon" />
+        <img src="heart-health.png" alt="Życie szkoły" class="icon" />
 
         <div class="name">Życie szkoły</div>
 
@@ -55,7 +55,7 @@
       </div>
 
       <div class="about-us__card">
-        <img src="/idea.png" alt="Innowacyjność" class="icon" />
+        <img src="idea.png" alt="Innowacyjność" class="icon" />
 
         <div class="name">Innowacyjność</div>
 
@@ -75,7 +75,7 @@
 @import './assets/scss/variables';
 
 .hero {
-  background-image: url('/hero-image.png');
+  background-image: url('~assets/images/hero-image.png');
   background-size: 125%;
   background-position: left;
   animation: slide 60s ease infinite;
@@ -110,8 +110,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: transparent url('https://obnoxious.club/assets/others/dot.png')
-      repeat 0 0;
+    background: transparent url('~assets/images/dot.png') repeat 0 0;
     top: 0;
     left: 0;
     margin: 0;
