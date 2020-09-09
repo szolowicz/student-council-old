@@ -21,7 +21,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy'
+          'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy.'
       },
       {
         name: 'keywords',
@@ -57,14 +57,14 @@ export default {
       title: 'Samorząd uczniowski ZSM1',
       author: 'Aleksander Szołowicz, Stanisław Fijołek',
       description:
-        'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy',
+        'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy.',
       lang: 'pl'
     },
     manifest: {
       name: 'Samorząd uczniowski ZSM1',
       short_name: 'ZSM1 SU',
       description:
-        'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy',
+        'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy.',
       theme_color: '#484f99',
       lang: 'pl'
     }
