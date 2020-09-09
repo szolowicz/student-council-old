@@ -1,20 +1,34 @@
 # school-government
 
-## Build Setup
+Website of the school government of Mechanical School N°1 in Poland, Bydgoszcz.
 
-```bash
-# install dependencies
-$ npm install
+http://zsm1.bydgoszcz.pl/strony/samorzad/
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+:sparkling_heart: User-friendly interface
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+:sparkles: Nuxt.js & Sass
 
-# generate static project
-$ npm run generate
-```
+:collision: Routing, Progressive Web App & Service Worker
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+:u5272: Headless CMS (datoCMS)
+
+## Install
+
+`git clone https://github.com/Lumm1t/school-government`
+
+`npm install` or `yarn`
+
+Change environment variables:
+
+1. Rename `.env.example` to `.env`
+2. Open `.env` and change `NUXT_ENV_DATOCMS_API_TOKEN` & `GOOGLE_ANALYTICS_ID`.
+
+## Run
+
+### Development
+
+`npm run dev`
+
+### Production
+
+`npm run generate`
