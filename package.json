@@ -1,8 +1,7 @@
 {
   "name": "school-government",
-  "version": "1.0.0",
-  "description": "Website of the school government of Mechanical School N°1 in Poland, Bydgoszcz",
-  "private": true,
+  "version": "1.0.1",
+  "description": "Website of the school government of Mechanical School N°1 in Poland, Bydgoszcz.",
   "scripts": {
     "dev": "nuxt",
     "generate": "nuxt generate",
