@@ -41,7 +41,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/logo.png' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap"'
+        href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap'
       }
     ]
   },

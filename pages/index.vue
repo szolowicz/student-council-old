@@ -29,7 +29,7 @@
 
     <a href="http://zsm1.bydgoszcz.pl/" class="go-back">Powrót</a>
 
-    <h1 class="section_topic" name="about-us">O nas</h1>
+    <h2 class="section_topic">O nas</h2>
 
     <div class="about-us">
       <div class="about-us__card">

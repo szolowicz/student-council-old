@@ -11,6 +11,14 @@
       </a>
     </p>
 
+    <a
+      href="http://zsm1.bydgoszcz.pl/strony/wcag/"
+      target="_blank"
+      rel="noopener"
+    >
+      Deklaracja dostępności
+    </a>
+
     <p>Wersja {{ require('../package.json').version }}</p>
   </footer>
 </template>
