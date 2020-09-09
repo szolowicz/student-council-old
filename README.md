@@ -20,8 +20,8 @@ http://zsm1.bydgoszcz.pl/strony/samorzad/
 
 Change environment variables:
 
-1. Rename `.env.local.example` to `.env.local`
-2. Open `.env.local` and change `NUXT_ENV_DATOCMS_API_TOKEN` & `GOOGLE_ANALYTICS_ID`.
+1. Rename `.env.example` to `.env`
+2. Open `.env` and change `NUXT_ENV_DATOCMS_API_TOKEN` & `GOOGLE_ANALYTICS_ID`.
 
 ## Run
 
