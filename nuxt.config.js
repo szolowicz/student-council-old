@@ -31,6 +31,10 @@ export default {
         name: 'author',
         content: 'Aleksander Szołowicz, Stanisław Fijołek'
       },
+      {
+        name: 'theme-color',
+        content: '#484f99'
+      },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [
