@@ -72,7 +72,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/main.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -94,7 +94,9 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     // Doc: https://github.com/nuxt-community/analytics-module
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    // Doc: https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/
+    '@nuxtjs/color-mode'
   ],
   /*
    ** Nuxt.js modules

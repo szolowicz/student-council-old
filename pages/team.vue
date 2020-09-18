@@ -281,7 +281,7 @@ export default {
   &:after {
     content: '<';
     font-size: 36px;
-    color: black;
+    color: var(--textColor);
     position: absolute;
     width: 100%;
     top: 0;
@@ -325,7 +325,7 @@ export default {
   right: 80px;
   top: 0;
   height: 100%;
-  color: black;
+  color: var(--textColor);
   transition: 0.15s;
   opacity: 0;
   visibility: hidden;
@@ -422,11 +422,11 @@ export default {
 
     .person-title {
       font-size: 3em;
-      color: black;
+      color: var(--textColor);
     }
 
     .person-description {
-      color: black;
+      color: var(--textColor);
       font-size: 1em;
     }
   }

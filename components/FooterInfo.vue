@@ -19,11 +19,23 @@
       Deklaracja dostępności
     </a>
 
+    <p
+      class="contract"
+      @click="
+        $colorMode.preference =
+          $colorMode.preference === 'light' ? 'dark' : 'light'
+      "
+    >
+      Tryb nocny
+    </p>
+
     <p>Wersja {{ require('../package.json').version }}</p>
   </footer>
 </template>
 
 <style lang="scss" scoped>
+@import './assets/scss/variables';
+
 footer {
   display: flex;
   justify-content: center;
@@ -33,13 +45,24 @@ footer {
   flex-wrap: nowrap;
   margin-top: 50px;
   padding-bottom: 20px;
-  background-color: whitesmoke;
-  box-shadow: 0 0 20px 20px whitesmoke;
+  background-color: var(--backgroundColor-primary);
+  box-shadow: 0 0 20px 20px var(--backgroundColor-primary);
 
   p {
     margin: 3px;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(var(--textColor), 0.8);
     text-align: center;
+  }
+
+  .contract {
+    font-weight: bold;
+    color: var(--textColor);
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      color: $secondColor;
+    }
   }
 }
 </style>

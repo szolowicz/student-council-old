@@ -69,7 +69,7 @@ export default {
     min-width: 220px;
     max-width: 350px;
     min-height: 350px;
-    background-color: white;
+    background-color: var(--backgroundColor-primary);
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
@@ -84,7 +84,7 @@ export default {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 24px;
-      color: rgba(0, 0, 0, 0.7);
+      color: rgba(var(--textColor), 0.7);
     }
 
     .subtitle {
@@ -92,7 +92,7 @@ export default {
       text-transform: uppercase;
       font-weight: 500;
       font-size: 16px;
-      color: rgba(0, 0, 0, 0.8);
+      color: rgba(var(--textColor), 0.8);
     }
 
     .map-info {

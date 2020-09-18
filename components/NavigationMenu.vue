@@ -101,7 +101,7 @@ $radius: 30px;
   width: 80px;
   transition: border-radius linear 0.8s, background-color 0.3s ease;
   border-bottom-left-radius: $radius;
-  background-color: white;
+  background-color: var(--backgroundColor-primary);
 
   @media (min-width: 1500px) {
     border-bottom-right-radius: $radius;
@@ -137,7 +137,7 @@ $radius: 30px;
     height: 2px;
     width: 30px;
     display: block;
-    background-color: black;
+    background-color: var(--backgroundColor-secondary);
     margin-bottom: 7px;
     cursor: pointer;
     -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
@@ -145,7 +145,7 @@ $radius: 30px;
     transition: transform 0.2s ease, background-color 0.5s ease;
     transition: transform 0.2s ease, background-color 0.5s ease,
       -webkit-transform 0.2s ease;
-    background-color: black;
+    background-color: var(--backgroundColor-secondary);
 
     &-last {
       margin-bottom: 0;
@@ -197,7 +197,7 @@ $radius: 30px;
 }
 
 .nav::after {
-  background-color: white;
+  background-color: var(--backgroundColor-primary);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
@@ -245,7 +245,7 @@ $radius: 30px;
 .nav__list-item a {
   position: relative;
   text-decoration: none;
-  color: black;
+  color: var(--textColor);
   overflow: hidden;
   cursor: pointer;
   font-weight: 600;
@@ -301,7 +301,7 @@ $radius: 30px;
 }
 
 .nav-active .menu-icon__line {
-  background-color: black;
+  background-color: var(--backgroundColor-secondary);
   -webkit-transform: translate(0, 0) rotate(-45deg);
   transform: translate(0, 0) rotate(-45deg);
 }

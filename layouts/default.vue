@@ -12,8 +12,8 @@ body {
   font-family: $mainFont;
   font-weight: 400;
   font-size: 15px;
-  background-color: #f5f5f5;
-  color: black;
+  background-color: var(--backgroundColor-primary);
+  color: var(--textColor);
 }
 
 ::-webkit-scrollbar {
@@ -38,7 +38,7 @@ body {
 a {
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: var(--textColor);
   transition-duration: 0.5s;
 
   &:hover {

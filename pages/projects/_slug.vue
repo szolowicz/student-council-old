@@ -67,7 +67,7 @@ export default {
 .post {
   margin: 40px auto;
   width: 55vw;
-  background-color: white;
+  background-color: var(--backgroundColor-primary);
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);

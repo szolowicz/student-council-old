@@ -1,0 +1,15 @@
+:root {
+  --textColor: black;
+  --backgroundColor-primary: white;
+  --backgroundColor-secondary: black;
+}
+
+.dark-mode {
+  --textColor: #ebf4f1;
+  --backgroundColor-primary: #34323d;
+  --backgroundColor-secondary: #f5f5f5;
+}
+
+body {
+  transition: background-color 0.5s;
+}
