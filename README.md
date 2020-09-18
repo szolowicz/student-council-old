@@ -2,7 +2,7 @@
 
 Website of the school government of Mechanical School N°1 in Poland, Bydgoszcz.
 
-http://zsm1.bydgoszcz.pl/strony/samorzad/
+https://zsm1.bydgoszcz.pl/strony/samorzad/
 
 :sparkling_heart: User-friendly interface
 

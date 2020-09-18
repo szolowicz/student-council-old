@@ -12,7 +12,7 @@
     </p>
 
     <a
-      href="http://zsm1.bydgoszcz.pl/strony/wcag/"
+      href="https://zsm1.bydgoszcz.pl/strony/wcag/"
       target="_blank"
       rel="noopener"
     >

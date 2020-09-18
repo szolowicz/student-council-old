@@ -27,7 +27,7 @@
       <div class="scroll-down"></div>
     </header>
 
-    <a href="http://zsm1.bydgoszcz.pl/" class="go-back">Powrót</a>
+    <a href="https://zsm1.bydgoszcz.pl/" class="go-back">Powrót</a>
 
     <h2 class="section_topic">O nas</h2>
 
