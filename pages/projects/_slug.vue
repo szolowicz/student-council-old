@@ -66,7 +66,7 @@ export default {
 
 .post {
   margin: 40px auto;
-  width: 55vw;
+  width: 65vw;
   background-color: var(--backgroundColor-primary);
   border-radius: 5px;
   overflow: hidden;
@@ -76,7 +76,7 @@ export default {
   flex-wrap: wrap;
   text-align: justify;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1200px) {
     width: 95vw;
   }
 
