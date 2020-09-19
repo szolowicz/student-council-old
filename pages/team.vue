@@ -211,7 +211,7 @@ export default {
 }
 
 .person {
-  width: calc(34% - 30px);
+  width: calc(34% - 7.59px);
   cursor: pointer;
   overflow: hidden;
   transition: 0.45s;
@@ -542,7 +542,7 @@ export default {
   }
 
   .person {
-    width: calc(50% - 20px);
+    width: 50%;
   }
 }
 
