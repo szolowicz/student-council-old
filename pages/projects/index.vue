@@ -3,13 +3,13 @@
     <TitleBox>Projekty</TitleBox>
 
     <div v-if="error">{{ error }}</div>
-    <div v-else-if="response.allPosts">
+    <div v-else-if="response">
       <div class="timeline">
         <div class="timeline__line"></div>
 
         <div class="timeline__container">
           <div
-            v-for="(post, index) in response.allPosts"
+            v-for="(post, index) in response"
             :key="index"
             class="timeline__card"
           >
@@ -33,25 +33,17 @@
         </div>
       </div>
     </div>
+
+    <infinite-loading spinner="spiral" @infinite="infiniteScroll">
+      <div slot="no-more"></div>
+      <div slot="no-results">Brak projektów</div>
+    </infinite-loading>
   </div>
 </template>
 
 <script>
 import moment from 'moment';
 import { request } from '../../datocms';
-
-const ALL_POSTS_QUERY = `
-{
-  allPosts(orderBy: _createdAt_DESC) {
-    title
-    previewPhoto {
-      url
-    }
-    slug
-    _createdAt
-  }
-}
-`;
 
 export default {
   name: 'App',
@@ -61,16 +53,42 @@ export default {
     }
   },
   data: () => ({
-    response: '',
-    error: null
+    response: [],
+    response2: [],
+    error: null,
+    skip: 0
   }),
-  async mounted() {
-    try {
-      this.response = await request({
-        query: ALL_POSTS_QUERY
-      });
-    } catch (e) {
-      this.error = e;
+  methods: {
+    infiniteScroll($state) {
+      setTimeout(async () => {
+        try {
+          this.response2 = await request({
+            query: `
+            {
+              allPosts(orderBy: _createdAt_DESC, first: "3", skip: "${this.skip}",) {
+                title
+                previewPhoto {
+                  url
+                }
+                slug
+                _createdAt
+              }
+            }
+            `
+          });
+
+          if (this.response2.allPosts.length) {
+            this.response2.allPosts.forEach((item) => this.response.push(item));
+            $state.loaded();
+          } else {
+            $state.complete();
+          }
+
+          this.skip += 3;
+        } catch (e) {
+          this.error = e;
+        }
+      }, 500);
     }
   },
   head: {

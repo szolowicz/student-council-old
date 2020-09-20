@@ -24,7 +24,8 @@
     "graphql": "^15.3.0",
     "graphql-request": "^3.0.0",
     "moment": "^2.27.0",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.13.0",
+    "vue-infinite-loading": "^2.4.5"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^1.1.1",
