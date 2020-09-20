@@ -3,13 +3,13 @@
     <TitleBox>Projekty</TitleBox>
 
     <div v-if="error">{{ error }}</div>
-    <div v-else-if="response">
+    <div v-else-if="projects">
       <div class="timeline">
         <div class="timeline__line"></div>
 
         <div class="timeline__container">
           <div
-            v-for="(post, index) in response"
+            v-for="(post, index) in projects"
             :key="index"
             class="timeline__card"
           >
@@ -53,8 +53,8 @@ export default {
     }
   },
   data: () => ({
+    projects: [],
     response: [],
-    response2: [],
     error: null,
     skip: 0
   }),
@@ -62,7 +62,7 @@ export default {
     infiniteScroll($state) {
       setTimeout(async () => {
         try {
-          this.response2 = await request({
+          this.response = await request({
             query: `
             {
               allPosts(orderBy: _createdAt_DESC, first: "3", skip: "${this.skip}",) {
@@ -77,8 +77,8 @@ export default {
             `
           });
 
-          if (this.response2.allPosts.length) {
-            this.response2.allPosts.forEach((item) => this.response.push(item));
+          if (this.response.allPosts.length) {
+            this.response.allPosts.forEach((item) => this.projects.push(item));
             $state.loaded();
           } else {
             $state.complete();
