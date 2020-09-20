@@ -44,10 +44,8 @@ const ALL_POSTS_QUERY = `
 {
   allPosts(orderBy: _createdAt_DESC) {
     title
-    content
     previewPhoto {
       url
-      alt
     }
     slug
     _createdAt
