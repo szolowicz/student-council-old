@@ -6,11 +6,13 @@ https://zsm1.bydgoszcz.pl/strony/samorzad/
 
 :sparkling_heart: User-friendly interface
 
-:sparkles: Nuxt.js & Sass
+:sparkles: Vue.js, Nuxt.js & Sass
 
-:collision: Routing, Progressive Web App & Service Worker
+:collision: Routing, Progressive Web App & Service worker
 
-:u5272: Headless CMS (datoCMS)
+:arrows_counterclockwise: Posts infinite scroll
+
+:u5272: Headless CMS (DatoCMS)
 
 ## Install
 
