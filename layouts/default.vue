@@ -6,7 +6,7 @@
 </template>
 
 <style lang="scss">
-@import './assets/scss/variables';
+@import './assets/sass/variables';
 
 body {
   font-family: $mainFont;

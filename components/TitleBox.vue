@@ -7,7 +7,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import './assets/scss/variables';
+@import './assets/sass/variables';
 
 .title-box {
   height: 250px;

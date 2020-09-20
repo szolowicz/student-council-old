@@ -180,7 +180,7 @@ export default {
 <style lang="scss" scoped>
 /* stylelint-disable */
 
-@import './assets/scss/variables';
+@import './assets/sass/variables';
 
 .container {
   width: 100%;

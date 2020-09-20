@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import './assets/scss/variables';
+@import './assets/sass/variables';
 
 .post {
   margin: 40px auto;

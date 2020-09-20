@@ -9,7 +9,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import './assets/scss/variables';
+@import './assets/sass/variables';
 
 .info-box {
   margin: 40px auto;

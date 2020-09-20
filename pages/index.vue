@@ -72,7 +72,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import './assets/scss/variables';
+@import './assets/sass/variables';
 
 .hero {
   background-image: url('~assets/images/hero-image.png');
