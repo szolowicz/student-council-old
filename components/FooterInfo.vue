@@ -26,7 +26,7 @@
           $colorMode.preference === 'light' ? 'dark' : 'light'
       "
     >
-      Tryb nocny
+      Wersja kontrastowa
     </p>
 
     <p>Wersja {{ require('../package.json').version }}</p>
