@@ -1,6 +1,6 @@
-# school-government
+# student-council
 
-Website of the school government of Mechanical School N°1 in Poland, Bydgoszcz.
+Website of the Student Council of Mechanical School N°1 in Poland, Bydgoszcz.
 
 https://zsm1.bydgoszcz.pl/strony/samorzad/
 
@@ -16,7 +16,7 @@ https://zsm1.bydgoszcz.pl/strony/samorzad/
 
 ## Install
 
-`git clone https://github.com/Lumm1t/school-government`
+`git clone https://github.com/Lumm1t/student-council`
 
 `npm install` or `yarn`
 

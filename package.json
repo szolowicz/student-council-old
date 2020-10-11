@@ -1,7 +1,7 @@
 {
-  "name": "school-government",
+  "name": "student-council",
   "version": "1.1.1",
-  "description": "Website of the school government of Mechanical School N°1 in Poland, Bydgoszcz.",
+  "description": "Website of the Student Council of Mechanical School N°1 in Poland, Bydgoszcz.",
   "scripts": {
     "dev": "nuxt",
     "generate": "nuxt generate",
