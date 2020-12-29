@@ -1,9 +1,13 @@
 <template>
   <div class="info-box">
     <div class="info-box__header">
-      <h2><slot name="header"></slot></h2>
+      <h2>
+        <slot name="header"></slot>
+      </h2>
 
-      <div class="info-box__content"><slot name="content"></slot></div>
+      <div class="info-box__content">
+        <slot name="content"></slot>
+      </div>
     </div>
   </div>
 </template>

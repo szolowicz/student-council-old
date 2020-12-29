@@ -24,9 +24,7 @@
           <br /><br />
           <span>Stanisław Fijołek</span>
           <br />
-          <a href="mailto:nerkaputina@gmail.com">
-            nerkaputina(at)gmail.com
-          </a>
+          <a href="mailto:nerkaputina@gmail.com">nerkaputina(at)gmail.com</a>
         </div>
 
         <div>

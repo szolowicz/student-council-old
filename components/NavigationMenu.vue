@@ -20,9 +20,7 @@
             </li>
 
             <li class="nav__list-item">
-              <nuxt-link :to="`/team`" class="hover-target">
-                Zespół
-              </nuxt-link>
+              <nuxt-link :to="`/team`" class="hover-target">Zespół</nuxt-link>
             </li>
 
             <li class="nav__list-item">
@@ -230,7 +228,7 @@ $radius: 30px;
   display: block;
   opacity: 0;
   text-align: left;
-  color: #fff;
+  color: #ffffff;
   overflow: hidden;
   font-size: 22px;
   line-height: 1.2;

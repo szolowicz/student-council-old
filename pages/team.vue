@@ -3,9 +3,7 @@
     <TitleBox v-if="!isSelected">Zespół</TitleBox>
 
     <InfoBox v-if="!isSelected">
-      <template #header>
-        SAMORZĄD CIĘ POTRZEBUJE!
-      </template>
+      <template #header>SAMORZĄD CIĘ POTRZEBUJE!</template>
 
       <template #content>
         Szukamy osób, które są zainteresowane uczestnictwem w samorządzie
