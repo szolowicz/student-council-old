@@ -11,19 +11,9 @@
 
 .title-box {
   height: 250px;
-  background: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from($mainColor),
-    to($secondColor)
-  );
   background: linear-gradient(270deg, $mainColor, $secondColor);
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: end;
   align-items: flex-end;
-  -webkit-box-pack: center;
   justify-content: center;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
   margin-bottom: 10px;

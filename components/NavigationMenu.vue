@@ -78,7 +78,6 @@ $radius: 30px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
   z-index: 9999;
   display: grid;
   grid-template-columns: 1fr 80px;
@@ -106,7 +105,6 @@ $radius: 30px;
   }
 
   &::before {
-    opacity: 0;
     content: '';
     width: 80px;
     height: 80px;
@@ -138,30 +136,18 @@ $radius: 30px;
     background-color: var(--backgroundColor-secondary);
     margin-bottom: 7px;
     cursor: pointer;
-    -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
-    transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
-    transition: transform 0.2s ease, background-color 0.5s ease;
-    transition: transform 0.2s ease, background-color 0.5s ease,
-      -webkit-transform 0.2s ease;
-    background-color: var(--backgroundColor-secondary);
-
-    &-last {
+    transition: transform 0.2s ease, background-color 0.5s ease, &-last {
       margin-bottom: 0;
     }
 
     &-left {
       width: 16.5px;
-      -webkit-transition: all 200ms linear;
       transition: all 200ms linear;
     }
 
     &-right {
       width: 16.5px;
       float: right;
-      -webkit-transition: all 200ms linear;
-      -moz-transition: all 200ms linear;
-      -o-transition: all 200ms linear;
-      -ms-transition: all 200ms linear;
       transition: all 200ms linear;
     }
   }
@@ -199,13 +185,11 @@ $radius: 30px;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
-  -webkit-transition-delay: 0s;
   transition-delay: 0s;
   box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
 }
 
 .nav::before {
-  -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 
@@ -233,7 +217,6 @@ $radius: 30px;
   font-size: 22px;
   line-height: 1.2;
   letter-spacing: 2px;
-  -webkit-transform: translate(30px, 0%);
   transform: translate(30px, 0%);
   transition: opacity 0.1s ease, transform 0.2s ease;
   transition-delay: 0.2s;
@@ -284,8 +267,6 @@ $radius: 30px;
   background: linear-gradient(288deg, $secondColor, $mainColor);
   background-clip: text;
   font-size: 25px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .nav__list-item.active-nav a::after {
@@ -300,20 +281,17 @@ $radius: 30px;
 
 .nav-active .menu-icon__line {
   background-color: var(--backgroundColor-secondary);
-  -webkit-transform: translate(0, 0) rotate(-45deg);
   transform: translate(0, 0) rotate(-45deg);
 }
 
 .nav-active .menu-icon__line-left {
   width: 15px;
-  -webkit-transform: translate(2px, 4px) rotate(45deg);
   transform: translate(2px, 4px) rotate(45deg);
 }
 
 .nav-active .menu-icon__line-right {
   width: 15px;
   float: right;
-  -webkit-transform: translate(-3px, -3.5px) rotate(45deg);
   transform: translate(-3px, -3.5px) rotate(45deg);
 }
 
@@ -334,25 +312,17 @@ $radius: 30px;
 }
 
 .nav-active .nav::after {
-  -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
 
 .nav-active .nav::before {
-  -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
 
 .nav-active .nav__list-item {
   opacity: 1;
-  -webkit-transform: translateX(0%);
   transform: translateX(0%);
-  -webkit-transition: opacity 0.3s ease, color 0.3s ease,
-    -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease,
-    -webkit-transform 0.3s ease;
 }
 
 $delay: 0.4;
@@ -361,7 +331,6 @@ $delay: 0.4;
   $delay: $delay + 0.1;
 
   .nav-active .nav__list-item:nth-child(#{$link}) {
-    -webkit-transition-delay: #{$delay}s;
     transition-delay: #{$delay}s;
   }
 }

@@ -236,12 +236,6 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background: linear-gradient(288deg, $mainColor, $secondColor);
-  background-clip: text;
-  background-size: 100%;
-  background-position: 50%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .about-us {

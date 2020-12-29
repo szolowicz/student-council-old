@@ -32,13 +32,6 @@
   }
 
   &__header {
-    background: -webkit-gradient(
-      linear,
-      right top,
-      left top,
-      from($mainColor),
-      to($secondColor)
-    );
     background: linear-gradient(270deg, $mainColor, $secondColor);
     color: white;
     width: 100%;
