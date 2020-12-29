@@ -98,7 +98,9 @@ export default {
    */
   modules: [
     // Doc: https://pwa.nuxtjs.org/
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://www.npmjs.com/package/nuxt-protected-mailto
+    'nuxt-protected-mailto'
   ],
   publicRuntimeConfig: {
     googleAnalytics: {
@@ -109,7 +111,23 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: false,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true,
+        preserveLineBreaks: false,
+        collapseWhitespace: true
+      }
+    }
+  },
   router: {
     base: '/strony/samorzad/'
   }
