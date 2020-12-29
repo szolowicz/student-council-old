@@ -9,22 +9,19 @@
           <br />
 
           <p class="subtitle">Samorząd uczniowski</p>
-          <a href="mailto:samorzaduczniowskizsm1@gmail.com">
-            samorzaduczniowskizsm1(at)gmail.com
-          </a>
+          <Mailto mail="samorzaduczniowskizsm1@gmail.com" />
 
           <br /><br />
           <p class="subtitle">Administratorzy strony</p>
+
           <span>Aleksander Szołowicz</span>
           <br />
-          <a href="mailto:aleksanderszolowicz@gmail.com">
-            aleksanderszolowicz(at)gmail.com
-          </a>
+          <Mailto mail="aleksanderszolowicz@gmail.com" />
 
           <br /><br />
           <span>Stanisław Fijołek</span>
           <br />
-          <a href="mailto:nerkaputina@gmail.com">nerkaputina(at)gmail.com</a>
+          <Mailto mail="nerkaputina@gmail.com" />
         </div>
 
         <div>
