@@ -1,7 +1,23 @@
 {
   "name": "student-council",
-  "version": "1.1.2",
   "description": "Website of the Student Council of Mechanical School N°1 in Poland, Bydgoszcz.",
+  "version": "1.1.3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lumm1t/student-council.git"
+  },
+  "keywords": [
+    "Samorząd",
+    "Zespół Szkół Mechanicznych nr 1 w Bydgoszczy",
+    "Student council",
+    "Mechanical School N°1 in Poland, Bydgoszcz"
+  ],
+  "author": "Aleksander Szołowicz <https://github.com/Lumm1t>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lumm1t/student-council/issues"
+  },
+  "homepage": "https://github.com/Lumm1t/student-council#readme",
   "scripts": {
     "dev": "nuxt",
     "generate": "nuxt generate",
