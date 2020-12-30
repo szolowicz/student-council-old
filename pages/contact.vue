@@ -71,7 +71,6 @@ export default {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    white-space: pre-wrap; /* css-3 */
     word-break: break-all;
     white-space: normal;
 

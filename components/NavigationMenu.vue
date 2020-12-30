@@ -136,7 +136,9 @@ $radius: 30px;
     background-color: var(--backgroundColor-secondary);
     margin-bottom: 7px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.5s ease, & -last {
+    transition: transform 0.2s ease, background-color 0.5s ease;
+
+    &-last {
       margin-bottom: 0;
     }
 

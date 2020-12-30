@@ -132,8 +132,7 @@
       position: relative;
       z-index: 1;
       display: block;
-      margin: auto;
-      margin-bottom: 20px;
+      margin: auto auto 20px;
       width: 128px;
       height: 128px;
     }

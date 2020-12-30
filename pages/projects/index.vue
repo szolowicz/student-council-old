@@ -43,7 +43,7 @@
 
 <script>
 import moment from 'moment';
-import { request } from '../../datocms';
+import { request } from '~/datocms';
 
 export default {
   name: 'App',

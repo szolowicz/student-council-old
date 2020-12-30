@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import { request } from '../datocms';
+import { request } from '~/datocms';
 
 const ALL_MEMBERS_QUERY = `
 {
@@ -272,7 +272,7 @@ export default {
     width: 100%;
     background: $mainColor;
     content: '';
-    height: 0px;
+    height: 0;
     transition: 0.45s;
   }
 
@@ -398,7 +398,7 @@ export default {
     text-align: center;
     z-index: 999;
     width: 100%;
-    font-size: 0px;
+    font-size: 0;
 
     img {
       max-width: 100%;
@@ -449,13 +449,13 @@ export default {
   }
 
   .team-container {
-    height: 0px;
+    height: 0;
     overflow: hidden;
   }
 
   .person-selected {
-    left: 0px !important;
-    top: 0px !important;
+    left: 0 !important;
+    top: 0 !important;
     z-index: 99;
     height: 100% !important;
     width: 100px !important;
@@ -470,7 +470,7 @@ export default {
 
 .person-back {
   &:before {
-    height: 0px !important;
+    height: 0 !important;
   }
 
   .person-details {
