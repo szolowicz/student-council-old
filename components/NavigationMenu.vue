@@ -136,7 +136,7 @@ $radius: 30px;
     background-color: var(--backgroundColor-secondary);
     margin-bottom: 7px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.5s ease, &-last {
+    transition: transform 0.2s ease, background-color 0.5s ease, & -last {
       margin-bottom: 0;
     }
 
@@ -151,187 +151,196 @@ $radius: 30px;
       transition: all 200ms linear;
     }
   }
-}
 
-.menu-icon:hover .menu-icon__line-left,
-.menu-icon:hover .menu-icon__line-right {
-  width: 30px;
+  &:hover {
+    .menu-icon__line-left,
+    .menu-icon__line-right {
+      width: 30px;
+    }
+  }
 }
 
 .nav {
   position: fixed;
   z-index: 1;
   pointer-events: all;
-}
 
-.nav::before,
-.nav::after {
-  content: '';
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  background-color: rgba(20, 21, 26, 0.6);
-  border-bottom-left-radius: 200%;
-  z-index: -1;
-  transition: border-radius ease 0.8s,
-    width cubic-bezier(0.77, 0, 0.175, 1) 0.6s,
-    height cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
-}
+  &::before,
+  &::after {
+    content: '';
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    background-color: rgba(20, 21, 26, 0.6);
+    border-bottom-left-radius: 200%;
+    z-index: -1;
+    transition: border-radius ease 0.8s,
+      width cubic-bezier(0.77, 0, 0.175, 1) 0.6s,
+      height cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
+  }
 
-.nav::after {
-  background-color: var(--backgroundColor-primary);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 300%;
-  transition-delay: 0s;
-  box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
-}
+  &::after {
+    background-color: var(--backgroundColor-primary);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 300%;
+    transition-delay: 0s;
+    box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
+  }
 
-.nav::before {
-  transition-delay: 0.2s;
-}
+  &::before {
+    transition-delay: 0.2s;
+  }
 
-.nav__content {
-  position: fixed;
-  visibility: hidden;
-  top: 90px;
-  right: 10px;
-  width: 300px;
-  text-align: left;
-}
+  &__content {
+    position: fixed;
+    visibility: hidden;
+    top: 90px;
+    right: 10px;
+    width: 300px;
+    text-align: left;
+  }
 
-.nav__list {
-  position: relative;
-  z-index: 2;
-}
+  &__list {
+    position: relative;
+    z-index: 2;
 
-.nav__list-item {
-  position: relative;
-  display: block;
-  opacity: 0;
-  text-align: left;
-  color: #ffffff;
-  overflow: hidden;
-  font-size: 22px;
-  line-height: 1.2;
-  letter-spacing: 2px;
-  transform: translate(30px, 0%);
-  transition: opacity 0.1s ease, transform 0.2s ease;
-  transition-delay: 0.2s;
-  margin-bottom: 7px;
-}
+    &-item {
+      position: relative;
+      display: block;
+      opacity: 0;
+      text-align: left;
+      color: #ffffff;
+      overflow: hidden;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: 2px;
+      transform: translate(30px, 0%);
+      transition: opacity 0.1s ease, transform 0.2s ease;
+      transition-delay: 0.2s;
+      margin-bottom: 7px;
 
-.nav__list-item a {
-  position: relative;
-  text-decoration: none;
-  color: var(--textColor);
-  overflow: hidden;
-  cursor: pointer;
-  font-weight: 600;
-  z-index: 2;
-  height: 28px;
-  padding-left: 40px;
-  margin: 5px;
-  display: inline-block;
-  transition: all 200ms linear;
-}
+      a {
+        position: relative;
+        text-decoration: none;
+        color: var(--textColor);
+        overflow: hidden;
+        cursor: pointer;
+        font-weight: 600;
+        z-index: 2;
+        height: 28px;
+        padding-left: 40px;
+        margin: 5px;
+        display: inline-block;
+        transition: all 200ms linear;
 
-.nav__list-item a::after {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 0;
-  width: 5px;
-  height: 0;
-  opacity: 0;
-  background: linear-gradient(288deg, $secondColor, $mainColor);
-  z-index: 1;
-  transition: all 200ms linear;
-}
+        &::after {
+          position: absolute;
+          content: '';
+          top: 50%;
+          left: 0;
+          width: 5px;
+          height: 0;
+          opacity: 0;
+          background: linear-gradient(288deg, $secondColor, $mainColor);
+          z-index: 1;
+          transition: all 200ms linear;
+        }
 
-.nav__list-item a:hover::after {
-  height: 100%;
-  opacity: 1;
-  top: 0;
-}
+        &:hover::after {
+          height: 100%;
+          opacity: 1;
+          top: 0;
+        }
+      }
 
-.nav__list-item:not(.active-nav) a:hover {
-  color: $mainColor;
-  font-size: 23px;
-  transition: color 100ms ease-in-out, font-size 100ms ease-in-out;
-}
+      &:not(.active-nav) a:hover {
+        color: $mainColor;
+        font-size: 23px;
+        transition: color 100ms ease-in-out, font-size 100ms ease-in-out;
+      }
 
-.nav__list-item.active-nav a {
-  background: linear-gradient(288deg, $secondColor, $mainColor);
-  background-clip: text;
-  font-size: 25px;
-}
+      &.active-nav {
+        a {
+          background: linear-gradient(288deg, $secondColor, $mainColor);
+          background-clip: text;
+          font-size: 25px;
 
-.nav__list-item.active-nav a::after {
-  height: 100%;
-  opacity: 1;
-  top: 0;
-}
+          &::after {
+            height: 100%;
+            opacity: 1;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
 
-.nav-active .nav__content {
-  visibility: visible;
-}
+  &-active {
+    .nav__content {
+      visibility: visible;
+    }
 
-.nav-active .menu-icon__line {
-  background-color: var(--backgroundColor-secondary);
-  transform: translate(0, 0) rotate(-45deg);
-}
+    .menu-icon {
+      &:hover {
+        .menu-icon__line-left,
+        .menu-icon__line-right {
+          width: 15px;
+        }
+      }
 
-.nav-active .menu-icon__line-left {
-  width: 15px;
-  transform: translate(2px, 4px) rotate(45deg);
-}
+      &__line {
+        background-color: var(--backgroundColor-secondary);
+        transform: translate(0, 0) rotate(-45deg);
 
-.nav-active .menu-icon__line-right {
-  width: 15px;
-  float: right;
-  transform: translate(-3px, -3.5px) rotate(45deg);
-}
+        &-left {
+          width: 15px;
+          transform: translate(2px, 4px) rotate(45deg);
+        }
 
-.nav-active .menu-icon:hover .menu-icon__line-left,
-.nav-active .menu-icon:hover .menu-icon__line-right {
-  width: 15px;
-}
+        &-right {
+          width: 15px;
+          float: right;
+          transform: translate(-3px, -3.5px) rotate(45deg);
+        }
+      }
+    }
 
-.nav-active .nav {
-  visibility: visible;
-}
+    .nav {
+      visibility: visible;
 
-.nav-active .nav::before,
-.nav-active .nav::after {
-  width: 300px;
-  height: 300px;
-  border-radius: 15px;
-}
+      &::before,
+      &::after {
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+      }
 
-.nav-active .nav::after {
-  transition-delay: 0.1s;
-}
+      &::before {
+        transition-delay: 0s;
+      }
 
-.nav-active .nav::before {
-  transition-delay: 0s;
-}
+      &::after {
+        transition-delay: 0.1s;
+      }
 
-.nav-active .nav__list-item {
-  opacity: 1;
-  transform: translateX(0%);
-  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
-}
+      &__list-item {
+        opacity: 1;
+        transform: translateX(0%);
+        transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
 
-$delay: 0.4;
+        $delay: 0.4;
+        @for $link from 0 through 4 {
+          $delay: $delay + 0.1;
 
-@for $link from 0 through 4 {
-  $delay: $delay + 0.1;
-
-  .nav-active .nav__list-item:nth-child(#{$link}) {
-    transition-delay: #{$delay}s;
+          &:nth-child(#{$link}) {
+            transition-delay: #{$delay}s;
+          }
+        }
+      }
+    }
   }
 }
 </style>
