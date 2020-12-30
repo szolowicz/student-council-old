@@ -277,8 +277,9 @@ export default {
   }
 
   &:after {
-    content: '<';
-    font-size: 36px;
+    content: '➜';
+    transform: scale(-1, 1);
+    font-size: 100px;
     color: var(--textColor);
     position: absolute;
     width: 100%;
