@@ -1,5 +1,14 @@
 import { request } from './datocms';
 
+const ALL_POSTS_SLUG_QUERY = `
+{
+  PostsList {
+    allPosts {
+      slug
+    }
+  }
+}`;
+
 export default {
   /*
    ** Nuxt target
@@ -133,13 +142,7 @@ export default {
   generate: {
     routes() {
       return request({
-        query: `
-          query PostsList {
-            allPosts {
-              slug
-            }
-          }
-        `
+        query: ALL_POSTS_SLUG_QUERY
       }).then((res) => {
         return res.allPosts.map((post) => {
           return '/projects/' + post.slug;

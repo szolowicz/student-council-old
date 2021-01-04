@@ -92,8 +92,7 @@ const ALL_MEMBERS_QUERY = `
       url
     }
   }
-}
-`;
+}`;
 
 export default {
   data() {
