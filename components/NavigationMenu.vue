@@ -7,31 +7,17 @@
           <span class="menu-icon__line"></span>
           <span
             class="menu-icon__line menu-icon__line-last menu-icon__line-right"
-          ></span>
+          >
+          </span>
         </div>
       </div>
+
       <div class="nav">
         <div class="nav__content">
           <ul class="nav__list" @click="isActive = false">
-            <li class="nav__list-item">
-              <nuxt-link :to="`/`" class="hover-target">
-                Strona główna
-              </nuxt-link>
-            </li>
-
-            <li class="nav__list-item">
-              <nuxt-link :to="`/team`" class="hover-target">Zespół</nuxt-link>
-            </li>
-
-            <li class="nav__list-item">
-              <nuxt-link :to="`/projects`" class="hover-target">
-                Projekty
-              </nuxt-link>
-            </li>
-
-            <li class="nav__list-item">
-              <nuxt-link :to="`/contact`" class="hover-target">
-                Kontakt
+            <li v-for="(link, i) in links" :key="i" class="nav__list-item">
+              <nuxt-link :to="link.reference" class="hover-target">
+                {{ link.name }}
               </nuxt-link>
             </li>
           </ul>
@@ -45,7 +31,25 @@
 export default {
   data() {
     return {
-      isActive: false
+      isActive: false,
+      links: [
+        {
+          name: 'Strona główna',
+          reference: '/'
+        },
+        {
+          name: 'Zespół',
+          reference: '/team'
+        },
+        {
+          name: 'Projekty',
+          reference: '/projects'
+        },
+        {
+          name: 'Kontakt',
+          reference: '/contact'
+        }
+      ]
     };
   },
   mounted() {
