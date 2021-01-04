@@ -1,11 +1,9 @@
 import { request } from './datocms';
 
 const ALL_POSTS_SLUG_QUERY = `
-{
-  PostsList {
-    allPosts {
-      slug
-    }
+query PostsList {
+  allPosts {
+    slug
   }
 }`;
 
