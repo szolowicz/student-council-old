@@ -1,3 +1,5 @@
+import { request } from './datocms';
+
 export default {
   /*
    ** Nuxt target
@@ -126,6 +128,23 @@ export default {
         preserveLineBreaks: false,
         collapseWhitespace: true
       }
+    }
+  },
+  generate: {
+    routes() {
+      return request({
+        query: `
+          query PostsList {
+            allPosts {
+              slug
+            }
+          }
+        `
+      }).then((res) => {
+        return res.allPosts.map((post) => {
+          return '/projects/' + post.slug;
+        });
+      });
     }
   },
   router: {
