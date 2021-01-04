@@ -9,7 +9,7 @@
 
         <p>Dodano {{ response.post._createdAt | formatDate() }}</p>
 
-        <p v-if="response.post._createdAt != response.post._updatedAt">
+        <p v-if="response.post._createdAt !== response.post._updatedAt">
           Zaktualizowano {{ response.post._updatedAt | formatDate() }}
         </p>
       </div>
@@ -21,7 +21,7 @@
 
 <script>
 import moment from 'moment';
-import { request } from '../../datocms';
+import { request } from '~/datocms';
 
 export default {
   filters: {
