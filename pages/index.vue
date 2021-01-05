@@ -33,7 +33,7 @@
 
     <div class="about-us">
       <div class="about-us__card">
-        <img src="party-baloons.png" alt="Imprezy szkolne" class="icon" />
+        <img src="party-balloons.png" alt="Imprezy szkolne" class="icon" />
 
         <div class="name">Imprezy szkolne</div>
 
