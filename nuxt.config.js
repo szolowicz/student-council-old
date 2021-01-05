@@ -141,11 +141,7 @@ export default {
     routes() {
       return request({
         query: ALL_POSTS_SLUG_QUERY
-      }).then((res) => {
-        return res.allPosts.map(({ slug }) => {
-          return `/projects/${slug}`;
-        });
-      });
+      }).then((res) => res.allPosts.map(({ slug }) => `/projects/${slug}`));
     }
   },
   router: {
