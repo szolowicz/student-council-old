@@ -142,8 +142,8 @@ export default {
       return request({
         query: ALL_POSTS_SLUG_QUERY
       }).then((res) => {
-        return res.allPosts.map((post) => {
-          return '/projects/' + post.slug;
+        return res.allPosts.map(({ slug }) => {
+          return '/projects/' + slug;
         });
       });
     }
