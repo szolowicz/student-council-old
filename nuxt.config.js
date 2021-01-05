@@ -143,7 +143,7 @@ export default {
         query: ALL_POSTS_SLUG_QUERY
       }).then((res) => {
         return res.allPosts.map(({ slug }) => {
-          return '/projects/' + slug;
+          return `/projects/${slug}`;
         });
       });
     }
