@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.1",
-    "graphql": "^15.3.0",
+    "graphql": "^15.5.0",
     "graphql-request": "^3.0.0",
     "moment": "^2.27.0",
     "nuxt": "^2.13.0",
