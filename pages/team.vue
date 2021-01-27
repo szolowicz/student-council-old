@@ -213,6 +213,7 @@ export default {
   overflow: hidden;
   transition: 0.45s;
   position: relative;
+
   &-details {
     display: none;
     box-sizing: border-box;
@@ -278,7 +279,7 @@ export default {
   &:after {
     content: '➜';
     transform: scale(-1, 1);
-    font-size: 100px;
+    font-size: 5vw;
     color: var(--textColor);
     position: absolute;
     width: 100%;
@@ -294,6 +295,10 @@ export default {
     justify-content: center;
     left: 0;
     flex-direction: column;
+
+    @media (max-width: 1200px) {
+      font-size: 8vw;
+    }
   }
 }
 
@@ -532,7 +537,11 @@ export default {
   }
 
   .container-ready .person-selected {
-    width: 50px !important;
+    width: 80px !important;
+
+    @media (max-width: 360px) {
+      width: 65px !important;
+    }
   }
 
   .team-detail {
