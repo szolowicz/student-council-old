@@ -55,7 +55,7 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.2.0",
+    "eslint": "^7.18.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -63,7 +63,7 @@
     "lint-staged": "^10.5.3",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
-    "sass-loader": "^9.0.3",
+    "sass-loader": "^10.1.1",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0"
