@@ -50,13 +50,13 @@ export default {
   filters: {
     formatDate(value) {
       return moment(String(value)).locale('pl').format('LL');
-    }
+    },
   },
   data: () => ({
     projects: [],
     response: [],
     error: null,
-    skip: 0
+    skip: 0,
   }),
   methods: {
     infiniteScroll($state) {
@@ -74,7 +74,7 @@ export default {
                 _createdAt
               }
             }
-            `
+            `,
           });
 
           if (this.response.allPosts.length) {
@@ -89,11 +89,11 @@ export default {
           this.error = e;
         }
       }, 500);
-    }
+    },
   },
   head: {
-    titleTemplate: 'Projekty - %s'
-  }
+    titleTemplate: 'Projekty - %s',
+  },
 };
 </script>
 

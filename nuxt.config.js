@@ -25,29 +25,29 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy.'
+          'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy.',
       },
       {
         name: 'keywords',
-        content: 'ZSM1, Zespół, Szkół, Mechanicznych, nr 1, Samorząd, SU'
+        content: 'ZSM1, Zespół, Szkół, Mechanicznych, nr 1, Samorząd, SU',
       },
       {
         name: 'author',
-        content: 'Aleksander Szołowicz, Stanisław Fijołek'
+        content: 'Aleksander Szołowicz, Stanisław Fijołek',
       },
       {
         name: 'theme-color',
-        content: '#484f99'
+        content: '#484f99',
       },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'logo.png' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap'
-      }
-    ]
+        href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap',
+      },
+    ],
   },
   /*
    ** Progressive Web App manifest
@@ -55,14 +55,14 @@ export default {
    */
   pwa: {
     icon: {
-      fileName: 'logo.png'
+      fileName: 'logo.png',
     },
     meta: {
       title: 'Samorząd uczniowski ZSM1',
       author: 'Aleksander Szołowicz, Stanisław Fijołek',
       description:
         'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy.',
-      lang: 'pl'
+      lang: 'pl',
     },
     manifest: {
       name: 'Samorząd uczniowski ZSM1',
@@ -70,8 +70,8 @@ export default {
       description:
         'Strona samorządu uczniowskiego Zespołu Szkół Mechanicznych nr 1 w Bydgoszczy.',
       theme_color: '#484f99',
-      lang: 'pl'
-    }
+      lang: 'pl',
+    },
   },
   /*
    ** Global CSS
@@ -100,7 +100,7 @@ export default {
     // Doc: https://github.com/nuxt-community/analytics-module
     '@nuxtjs/google-analytics',
     // Doc: https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
   ],
   /*
    ** Nuxt.js modules
@@ -109,12 +109,12 @@ export default {
     // Doc: https://pwa.nuxtjs.org/
     '@nuxtjs/pwa',
     // https://www.npmjs.com/package/nuxt-protected-mailto
-    'nuxt-protected-mailto'
+    'nuxt-protected-mailto',
   ],
   publicRuntimeConfig: {
     googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID
-    }
+      id: process.env.GOOGLE_ANALYTICS_ID,
+    },
   },
   /*
    ** Build configuration
@@ -133,18 +133,18 @@ export default {
         trimCustomFragments: true,
         useShortDoctype: true,
         preserveLineBreaks: false,
-        collapseWhitespace: true
-      }
-    }
+        collapseWhitespace: true,
+      },
+    },
   },
   generate: {
     routes() {
       return request({
-        query: ALL_POSTS_SLUG_QUERY
+        query: ALL_POSTS_SLUG_QUERY,
       }).then((res) => res.allPosts.map(({ slug }) => `/projects/${slug}`));
-    }
+    },
   },
   router: {
-    base: '/strony/samorzad/'
-  }
+    base: '/strony/samorzad/',
+  },
 };

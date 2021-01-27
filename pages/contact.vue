@@ -45,8 +45,8 @@
 <script>
 export default {
   head: {
-    titleTemplate: 'Kontakt - %s'
-  }
+    titleTemplate: 'Kontakt - %s',
+  },
 };
 </script>
 

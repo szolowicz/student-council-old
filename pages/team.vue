@@ -20,7 +20,7 @@
       :class="[
         'container',
         isSelected ? 'container-selected' : '',
-        isReady ? 'container-ready' : ''
+        isReady ? 'container-ready' : '',
       ]"
     >
       <div class="team-container">
@@ -109,14 +109,14 @@ export default {
       selectedPersonData: {
         name: '',
         title: null,
-        photo: null
-      }
+        photo: null,
+      },
     };
   },
   async mounted() {
     try {
       this.response = await request({
-        query: ALL_MEMBERS_QUERY
+        query: ALL_MEMBERS_QUERY,
       });
     } catch (e) {
       this.error = e;
@@ -164,13 +164,13 @@ export default {
         this.selectedPerson.classList.remove('person-back', 'person-selected');
         this.isOk = false;
       }, 400);
-    }
+    },
   },
   head() {
     return {
-      titleTemplate: this.title
+      titleTemplate: this.title,
     };
-  }
+  },
 };
 </script>
 

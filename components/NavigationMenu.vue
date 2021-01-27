@@ -35,21 +35,21 @@ export default {
       links: [
         {
           name: 'Strona główna',
-          reference: '/'
+          reference: '/',
         },
         {
           name: 'Zespół',
-          reference: '/team'
+          reference: '/team',
         },
         {
           name: 'Projekty',
-          reference: '/projects'
+          reference: '/projects',
         },
         {
           name: 'Kontakt',
-          reference: '/contact'
-        }
-      ]
+          reference: '/contact',
+        },
+      ],
     };
   },
   mounted() {
@@ -63,8 +63,8 @@ export default {
   methods: {
     openMenu() {
       this.isActive = !this.isActive;
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -5,8 +5,8 @@ export function request({ query, variables, preview }) {
     : `https://graphql.datocms.com/`;
   const client = new GraphQLClient(endpoint, {
     headers: {
-      authorization: `Bearer ${process.env.NUXT_ENV_DATOCMS_API_TOKEN}`
-    }
+      authorization: `Bearer ${process.env.NUXT_ENV_DATOCMS_API_TOKEN}`,
+    },
   });
   return client.request(query, variables);
 }

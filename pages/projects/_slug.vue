@@ -27,12 +27,12 @@ export default {
   filters: {
     formatDate(value) {
       return moment(String(value)).locale('pl').format('LLLL');
-    }
+    },
   },
   data: () => ({
     title: 'Projekty - %s',
     response: '',
-    error: null
+    error: null,
   }),
   async mounted() {
     try {
@@ -46,7 +46,7 @@ export default {
               _updatedAt
             }
           }
-        `
+        `,
       });
       this.title = `${this.response.post.title} - Projekty - %s`;
     } catch (e) {
@@ -55,9 +55,9 @@ export default {
   },
   head() {
     return {
-      titleTemplate: this.title
+      titleTemplate: this.title,
     };
-  }
+  },
 };
 </script>
 
