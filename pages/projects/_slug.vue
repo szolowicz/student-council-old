@@ -103,8 +103,8 @@ export default {
     margin: 1em 0;
   }
 
+  ol,
   ul {
-    list-style-type: disc;
     margin: 1em 0;
     padding-left: 40px;
   }
