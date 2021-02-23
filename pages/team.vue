@@ -113,6 +113,11 @@ export default {
       },
     };
   },
+  head() {
+    return {
+      titleTemplate: this.title,
+    };
+  },
   async mounted() {
     try {
       this.response = await request({
@@ -165,11 +170,6 @@ export default {
         this.isOk = false;
       }, 400);
     },
-  },
-  head() {
-    return {
-      titleTemplate: this.title,
-    };
   },
 };
 </script>

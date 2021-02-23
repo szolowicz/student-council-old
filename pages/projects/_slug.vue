@@ -34,6 +34,11 @@ export default {
     response: '',
     error: null,
   }),
+  head() {
+    return {
+      titleTemplate: this.title,
+    };
+  },
   async mounted() {
     try {
       this.response = await request({
@@ -52,11 +57,6 @@ export default {
     } catch (e) {
       this.error = e;
     }
-  },
-  head() {
-    return {
-      titleTemplate: this.title,
-    };
   },
 };
 </script>

@@ -58,6 +58,9 @@ export default {
     error: null,
     skip: 0,
   }),
+  head: {
+    titleTemplate: 'Projekty - %s',
+  },
   methods: {
     infiniteScroll($state) {
       setTimeout(async () => {
@@ -90,9 +93,6 @@ export default {
         }
       }, 500);
     },
-  },
-  head: {
-    titleTemplate: 'Projekty - %s',
   },
 };
 </script>
