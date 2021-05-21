@@ -41,7 +41,7 @@
     "graphql": "^15.5.0",
     "graphql-request": "^3.0.0",
     "moment": "^2.27.0",
-    "nuxt": "^2.15.5",
+    "nuxt": "^2.15.6",
     "nuxt-protected-mailto": "^0.0.6",
     "vue-infinite-loading": "^2.4.5"
   },
