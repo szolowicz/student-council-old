@@ -7609,10 +7609,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-protected-mailto@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/nuxt-protected-mailto/-/nuxt-protected-mailto-0.0.6.tgz#e23c22011f73d986d548eab72190806c18518895"
-  integrity sha512-NRRkw1tnm4VmI3Lbs8A1VrhD7O5Hhux2y/gNwtAshtYE7PAHhRpi4j7D7E7P/xVKSqVticlAAMOitFnNwMF5fQ==
+nuxt-protected-mailto@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/nuxt-protected-mailto/-/nuxt-protected-mailto-0.0.8.tgz#802f0222794b31672d2215480be12ba37ed429fa"
+  integrity sha512-dchNoZOliIrQTs+8ne3N64LPWJL4WAyPIt5EBTjlt1AMF6GslxEEZw7Sk2IJ7r7x1IjNblECQDkFu2myD/FWWw==
 
 nuxt@^2.15.7:
   version "2.15.7"
