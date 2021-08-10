@@ -42,7 +42,7 @@
     "graphql-request": "^3.5.0",
     "moment": "^2.27.0",
     "nuxt": "^2.15.7",
-    "nuxt-protected-mailto": "^0.0.6",
+    "nuxt-protected-mailto": "^0.0.8",
     "vue-infinite-loading": "^2.4.5"
   },
   "devDependencies": {
