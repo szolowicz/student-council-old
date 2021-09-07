@@ -7603,10 +7603,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-protected-mailto@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/nuxt-protected-mailto/-/nuxt-protected-mailto-0.0.8.tgz#802f0222794b31672d2215480be12ba37ed429fa"
-  integrity sha512-dchNoZOliIrQTs+8ne3N64LPWJL4WAyPIt5EBTjlt1AMF6GslxEEZw7Sk2IJ7r7x1IjNblECQDkFu2myD/FWWw==
+nuxt-protected-mailto@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/nuxt-protected-mailto/-/nuxt-protected-mailto-0.0.9.tgz#64e0e1eb82552d113f63186441cfeb03e61e7b62"
+  integrity sha512-K0OmjHcGW7vzF7UQqUVpjigTpW4a2bL+8YIWAhAYRuJb63jOVoQbI20SRwK8r+A4XQJSWiy1hXztIfU6cmRy1A==
 
 nuxt@^2.15.8:
   version "2.15.8"
